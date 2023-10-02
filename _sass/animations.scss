@@ -1,0 +1,30 @@
+/* Fade Animations */
+.fade-in {
+    opacity: 0;
+    filter: blur(5px);
+    transition: all var(--fade-duration);
+    transition-delay: calc(var(--order) * 100ms);
+  }
+  .fade-in-left {
+    opacity: 0;
+    filter: blur(5px);
+    transition: all var(--fade-duration);
+    transition-delay: calc(var(--order) * 100ms);
+    -webkit-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
+  .fade-in-right {
+    opacity: 0;
+    filter: blur(5px);
+    transition: all var(--fade-duration);
+    transition-delay: calc(var(--order) * 100ms);
+    -webkit-transform: translateX(100%);
+    -ms-transform: translateX(100%);
+    transform: translateX(100%);
+  }
+  .show {
+    filter: blur(0);
+    transform: translateX(0);
+    opacity: 1;
+  }

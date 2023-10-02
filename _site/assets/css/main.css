@@ -1,0 +1,674 @@
+:root {
+  --step--2: clamp(0.78rem, calc(0.77rem + 0.03vw), 0.80rem);
+  --step--1: clamp(0.94rem, calc(0.92rem + 0.11vw), 1.00rem);
+  --step-0: clamp(1.13rem, calc(1.08rem + 0.22vw), 1.25rem);
+  --step-1: clamp(1.35rem, calc(1.28rem + 0.37vw), 1.56rem);
+  --step-2: clamp(1.62rem, calc(1.50rem + 0.58vw), 1.95rem);
+  --step-3: clamp(1.94rem, calc(1.77rem + 0.87vw), 2.44rem);
+  --step-4: clamp(2.33rem, calc(2.08rem + 1.25vw), 3.05rem);
+  --step-5: clamp(2.80rem, calc(2.45rem + 1.77vw), 3.82rem);
+  --dark-clr: #0f0f0f;
+  --dark-clr-2: #1A1A1A;
+  --light-clr: rgb(220, 220, 220);
+  --clr-accent: #45a0f5;
+  --clr-accent-2: #26e3c2;
+  --opacity-hover: 0.7;
+  --gap: 1rem;
+  --body-content-width: 65em;
+  --fade-duration: 300ms;
+  --nice-shadow: 0 -2px 10px var(--clr-accent-2);
+  --body-font: "Kumbh Sans", sans-serif;
+  --linear-grad: linear-gradient(to right, var(--clr-accent-2), var(--clr-accent)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+body {
+  background-color: var(--dark-clr);
+  color: var(--light-clr);
+  font-family: var(--body-font);
+  overflow-x: hidden;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  background-image: radial-gradient(rgba(22, 72, 49, 0.6) 1px, transparent 0);
+  background-size: 35px 35px;
+  background-attachment: fixed;
+}
+
+body > * {
+  width: min(100% - 2rem, 90em, 90vw);
+  margin-inline: auto;
+  overflow-x: hidden;
+}
+
+main {
+  --section-gap: 10rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--section-gap);
+}
+
+main > section:last-child {
+  margin-bottom: var(--section-gap);
+}
+
+main p {
+  opacity: var(--text-opacity);
+  font-size: var(--step-0);
+}
+
+.scroll-top {
+  display: none;
+  position: fixed;
+  width: fit-content;
+  bottom: 10px;
+  right: 10px;
+  z-index: 99;
+  color: var(--clr-accent);
+  font-weight: bold;
+}
+
+/* Header */
+header {
+  --nav-gap: 2rem;
+  display: flex;
+  padding-block: 1rem;
+  justify-content: space-evenly;
+}
+
+@media only screen and (max-width: 700px) {
+  header {
+    padding-block: var(--nav-gap);
+  }
+  .logo,
+  .nav-header .btn {
+    display: none;
+  }
+}
+.nav-header {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.nav-header > ul {
+  display: flex;
+  gap: var(--nav-gap);
+}
+
+.nav-link {
+  opacity: var(--text-opacity);
+}
+
+.logo {
+  font-size: var(--step-1);
+}
+
+.btn {
+  border: 2px solid var(--light-clr);
+  padding: 0.5rem 1.8rem;
+  border-radius: 40px;
+  background-color: var(--dark-clr);
+  color: #26e3c2;
+  width: fit-content;
+}
+
+.btn:hover {
+  filter: brightness(0.6);
+}
+
+.btn-inverse {
+  background-color: var(--light-clr);
+  color: var(--dark-clr);
+}
+
+.btn-inverse:hover {
+  filter: brightness(0.6);
+}
+
+/* Main */
+/* Hero */
+.hero {
+  display: grid;
+  min-height: calc(100vh - 5rem);
+  place-items: center;
+  text-align: center;
+}
+
+@media only screen and (max-width: 700px) {
+  .hero {
+    grid-template-columns: 1fr;
+    row-gap: 2rem;
+  }
+}
+.hero-body {
+  display: flex;
+  flex-direction: column;
+  gap: 4em;
+}
+
+.hero-body-title {
+  display: grid;
+  place-items: center;
+  gap: 2em;
+}
+
+.hero-body-title > img {
+  height: 300px;
+  border-radius: 90px;
+}
+
+.hero-body-btn {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 2em;
+  row-gap: 3em;
+  justify-content: center;
+}
+
+.hero-img > img {
+  object-fit: cover;
+}
+
+.hero-img {
+  position: relative;
+}
+
+/* Cards */
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
+  column-gap: 2em;
+  row-gap: 3em;
+  width: 100%;
+}
+
+.tutoring-subjects-container {
+  display: grid;
+  grid-template-areas: "a ." "b c" "d e";
+  width: min(100%, 70em);
+  margin-inline: auto;
+  grid-template-columns: repeat(auto-fit, minmax(min(400px, 100%), 1fr));
+  row-gap: 2em;
+  column-gap: 2em;
+  margin-bottom: 10em;
+}
+
+@media (width < 800px) {
+  .tutoring-subjects-container {
+    display: grid;
+    grid-template-areas: "a" "b" "c" "d" "e";
+  }
+}
+.tutoring-subjects-container > p:nth-child(1) {
+  grid-area: a;
+}
+
+.tutoring-subjects-container > p:nth-child(2) {
+  grid-area: b;
+}
+
+.tutoring-subjects-container > p:nth-child(3) {
+  grid-area: c;
+}
+
+.tutoring-subjects-container > p:nth-child(4) {
+  grid-area: d;
+}
+
+.tutoring-subjects-container > p:nth-child(5) {
+  grid-area: e;
+}
+
+.card {
+  background-color: var(--dark-clr-2);
+  padding: 20% 1rem 1rem;
+  border: 1px solid rgb(42, 42, 42);
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+@media (width < 900px) {
+  .card {
+    padding: 10% 1rem 1rem;
+  }
+}
+/* About me */
+.about-container {
+  display: grid;
+  grid-template-columns: 1fr 400px;
+  max-width: var(--body-content-width);
+  margin-inline: auto;
+  align-items: center;
+  gap: 2em;
+}
+
+.about-body {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 90ch;
+}
+
+.about-img > img {
+  object-fit: contain;
+  width: min(100%, 300px);
+  margin-inline: auto;
+  border-radius: 10px;
+}
+
+/* Youtube */
+.youtube-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: var(--body-content-width);
+  margin-inline: auto;
+  align-items: center;
+  gap: 2em;
+}
+
+.youtube-video {
+  text-align: center;
+  aspect-ratio: 16/9;
+  width: min(100%, 50em);
+  margin-inline: auto;
+}
+
+.youtube-body {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 90ch;
+}
+
+@media only screen and (max-width: 900px) {
+  .about-container,
+  .youtube-container {
+    grid-template-columns: 1fr;
+    place-items: center;
+    gap: 2rem;
+  }
+  .about-img > img {
+    max-width: 250px;
+  }
+}
+/* Pricing */
+.pricing-cards-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "online face" "btn btn";
+  column-gap: 2em;
+  row-gap: 3em;
+  width: min(100%, 50em);
+  margin-inline: auto;
+}
+
+.pricing-cards-container > div:nth-child(1) {
+  grid-area: online;
+}
+
+.pricing-cards-container > div:nth-child(1) {
+  grid-area: face;
+}
+
+.pricing-cards-container > div:nth-child(3) {
+  grid-area: btn;
+  justify-self: center;
+}
+
+@media (width < 600px) {
+  .pricing-cards-container {
+    grid-template-areas: "online" "face" "btn";
+    grid-template-columns: 1fr;
+  }
+}
+.pricing-card {
+  background-color: var(--dark-clr-2);
+  padding: 20% 1rem 1rem;
+  border: 1px solid rgb(42, 42, 42);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Reviews */
+.reviews-title {
+  display: grid;
+  place-items: center;
+  margin-bottom: 5rem;
+}
+
+.review-container {
+  /* display: grid; */
+  columns: 3 280px;
+  column-gap: 3rem;
+}
+
+@media only screen and (max-width: 320px) {
+  .review-container {
+    column-width: 100%;
+  }
+}
+.review-card {
+  break-inside: avoid;
+  page-break-inside: avoid;
+  margin-top: 2rem;
+  background-color: var(--dark-clr-2);
+  padding: 20% 1rem 2rem;
+  border: 1px solid rgb(42, 42, 42);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  position: relative;
+}
+
+.review-card > p:last-child {
+  margin-top: auto;
+  text-transform: capitalize;
+}
+
+/* Form */
+.form-section {
+  width: min(65em, 100%);
+  margin-inline: auto;
+}
+
+.form-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+@media only screen and (max-width: 700px) {
+  .form-container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+.contact-other {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 5rem;
+}
+
+.contact-other > a {
+  font-size: var(--step-2);
+  text-decoration: underline;
+  color: #26e3c2;
+}
+
+.contact-other > a:hover {
+  opacity: var(--opacity-hover);
+}
+
+.form-item {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #164831;
+  border-radius: 4px;
+}
+
+.form-item > label {
+  opacity: var(--text-opacity);
+  font-size: var(--step-0);
+}
+
+.form-item > input,
+.form-item > textarea,
+.form-item > select {
+  background-color: rgb(42, 42, 42);
+  border: none;
+  width: 100%;
+  padding: 0.5rem 1rem;
+  color: var(--light-clr);
+  resize: vertical;
+}
+
+.form-message {
+  grid-column: 1/-1;
+}
+
+.form-btn {
+  cursor: pointer;
+  grid-column: 1/-1;
+  border: none;
+  border-radius: 20px;
+  color: var(--dark-clr);
+  font-size: var(--step-1);
+  background-image: var(--linear-grad);
+}
+
+/* Footer */
+footer {
+  margin-bottom: 5rem;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2em;
+  max-width: 40em;
+}
+
+.nav-footer {
+  justify-self: end;
+}
+
+.nav-footer > ul {
+  display: flex;
+  gap: 2rem;
+}
+
+html {
+  scroll-behavior: smooth;
+  color-scheme: dark light;
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  min-height: 100dvh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.7;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture,
+svg,
+video {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+    transition: none;
+  }
+}
+.bi {
+  opacity: var(--text-opacity);
+}
+
+:focus-visible {
+  outline: 4px solid var(--clr-accent);
+  outline-offset: 3px;
+}
+
+h1 {
+  line-height: 1.8;
+  font-size: var(--step-4);
+}
+
+a {
+  text-decoration: none;
+  text-transform: capitalize;
+  color: var(--light-clr);
+}
+
+.body-link {
+  text-transform: lowercase;
+  color: var(--clr-accent-2);
+  text-decoration: underline;
+}
+
+.body-link:hover {
+  opacity: var(--opacity-hover);
+}
+
+.is-hidden {
+  display: none;
+}
+
+/* Font Size */
+.font--2 {
+  font-size: var(--step--2);
+}
+
+.font--1 {
+  font-size: var(--step--1);
+}
+
+.font-0 {
+  font-size: var(--step-0);
+}
+
+.font-1 {
+  font-size: var(--step-1);
+}
+
+.font-2 {
+  font-size: var(--step-2);
+}
+
+.font-3 {
+  font-size: var(--step-3);
+}
+
+.font-4 {
+  font-size: var(--step-4);
+}
+
+.font-5 {
+  font-size: var(--step-5);
+}
+
+.text-center {
+  text-align: center;
+}
+
+.mx-auto {
+  margin-inline: auto;
+}
+
+.block {
+  display: block;
+}
+
+.mb-2 {
+  margin-bottom: 2rem;
+}
+
+.mt-2 {
+  margin-top: 2rem;
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+.fancy-text {
+  text-transform: capitalize;
+  background-image: var(--linear-grad);
+  background-clip: text;
+  /* Set the background size and repeat properties. */
+  background-size: 100%;
+  background-repeat: repeat;
+  /* Use the text as a mask for the background. */
+  /* This will show the gradient as a text color rather than element bg. */
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+  text-transform: capitalize;
+}
+
+/* Fade Animations */
+.fade-in {
+  opacity: 0;
+  filter: blur(5px);
+  transition: all var(--fade-duration);
+  transition-delay: calc(var(--order) * 100ms);
+}
+
+.fade-in-left {
+  opacity: 0;
+  filter: blur(5px);
+  transition: all var(--fade-duration);
+  transition-delay: calc(var(--order) * 100ms);
+  -webkit-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+  transform: translateX(-100%);
+}
+
+.fade-in-right {
+  opacity: 0;
+  filter: blur(5px);
+  transition: all var(--fade-duration);
+  transition-delay: calc(var(--order) * 100ms);
+  -webkit-transform: translateX(100%);
+  -ms-transform: translateX(100%);
+  transform: translateX(100%);
+}
+
+.show {
+  filter: blur(0);
+  transform: translateX(0);
+  opacity: 1;
+}
+
+/*# sourceMappingURL=main.css.map */

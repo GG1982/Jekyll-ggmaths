@@ -1,0 +1,108 @@
+
+.bi {
+    opacity: var(--text-opacity);
+  }
+  :focus-visible {
+    outline: 4px solid var(--clr-accent);
+    outline-offset: 3px;
+  }
+  
+  h1 {
+    line-height: 1.8;
+    font-size: var(--step-4);
+  }
+  
+  a {
+    text-decoration: none;
+    text-transform: capitalize; 
+    color: var(--light-clr);
+  }
+
+  
+  .body-link {
+    text-transform: lowercase;
+    color: var(--clr-accent-2);
+    text-decoration: underline;
+  }
+  .body-link:hover {
+    opacity: var(--opacity-hover);
+  }
+  
+  .is-hidden {
+    display: none;
+  }
+  /* Font Size */
+  .font--2 {
+    font-size: var(--step--2);
+  }
+  
+  .font--1 {
+    font-size: var(--step--1);
+  }
+  
+  .font-0 {
+    font-size: var(--step-0);
+  }
+  
+  .font-1 {
+    font-size: var(--step-1);
+  }
+  
+  .font-2 {
+    font-size: var(--step-2);
+  }
+  
+  .font-3 {
+    font-size: var(--step-3);
+  }
+  
+  .font-4 {
+    font-size: var(--step-4);
+  }
+  
+  .font-5 {
+    font-size: var(--step-5);
+  }
+  
+  .text-center {
+    text-align: center;
+  }
+  
+  .mx-auto {
+    margin-inline: auto;
+  }
+  
+  .block {
+    display: block;
+  }
+  
+  .mb-2 {
+    margin-bottom: 2rem ;
+  }
+  .mt-2 {
+    margin-top: 2rem ;
+  }
+  
+  .capitalize {
+    text-transform: capitalize;
+  }
+  
+  .fancy-text {
+    text-transform: capitalize;
+    background-image: var(--linear-grad);
+    background-clip: text;
+    /* Set the background size and repeat properties. */
+    background-size: 100%;
+    background-repeat: repeat;
+  
+    /* Use the text as a mask for the background. */
+    /* This will show the gradient as a text color rather than element bg. */
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+    
+    text-transform: capitalize;
+    
+  }
