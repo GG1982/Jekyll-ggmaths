@@ -20,7 +20,7 @@
       <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/main.css">
       {% if page.custom_css %}
         {% for stylesheet in page.custom_css %}
-          <link rel="stylesheet" href="../assets/css/{{ stylesheet }}.css">
+          <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/{{ stylesheet }}.css">
         {% endfor %}
       {% endif %}
         
@@ -36,7 +36,7 @@
       gtag('config', 'G-67ZXE2EPM5');
       </script>
 
-      <script defer src="../assets/js/main.js"></script>
+      <script defer src="{{ site.baseurl }}/assets/js/main.js"></script>
 
   </head>
   <body>
