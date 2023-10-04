@@ -51,7 +51,7 @@ main {
   box-shadow: var(--nice-shadow);
 }
 
-@media (width < 850px) {
+@media (max-width: 850px) {
   .lists {
     grid-auto-flow: row;
     grid-template-columns: 1fr;
