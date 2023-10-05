@@ -1,13 +1,20 @@
+.grade-nav {
+    // background-color: red;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 1em;
+}
+
+
 .grade-nav > ul {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
-
-    max-width: 900px;
     margin-inline: auto;
 
-
+    width: min(100%, 900px);
     column-gap: 3em;
     row-gap: 2em;
 }
@@ -26,7 +33,7 @@ main {
 
 .key-points > li:not(li:first-child) {
     opacity: var(--text-opacity);
-    margin-top: 1em;
+    margin-top: 1.5em;
     margin-left: 2em;
 }
 
