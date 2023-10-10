@@ -94,16 +94,26 @@ main {
     margin-block: 0.25em;
 }
 
+.booklets a,
+.mocks a {
+    text-decoration: underline;
+}
+
 .booklets > li:nth-child(2n+1),
 .mocks > li:nth-child(2n+1) {
-    background-color: hsl(210, 21%, 13%);
-    filter: brightness(1.2);
+    background-color: hsl(195, 26%, 82%);
+    // filter: brightness(1.2);
+}
+
+.booklets > li:nth-child(2n+1) > a,
+.mocks > li:nth-child(2n+1) > a{
+    color: black;
 }
 
 .booklets > li:nth-child(2n),
 .mocks > li:nth-child(2n) {
-    background-color: hsl(210, 42%, 26%);
-    filter: brightness(1.2);
+    background-color: hsl(210, 52%, 20%);
+    // filter: brightness(1.2);
 }
 
 .booklets > li:first-child {
