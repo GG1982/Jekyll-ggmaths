@@ -18,17 +18,8 @@ custom_css: secondary
     </nav>
 
 
-    <section>
-        <h3 class="fancy-text font-2 ">Grades 4 - 6</h3>
-            <ul class="">
-                {% for pdf in site.static_files %}
-                    {% if pdf.path contains 'grade_4-6' %}
-                        {% for paper in pdf.path %}
-                            <li><a target="_blank" rel="noopener" href="{{ site.url }}{{ pdf.path }}">{{ pdf.name | remove: '.pdf' }}</a></li>
-                        {% endfor %}
-                    {% endif %}
-                {% endfor %}
-            </ul>
+    <section class="text-center">
+        <h3 class="fancy-text font-4 ">Grades 4 - 6</h3>
     </section>
 
 </main>
