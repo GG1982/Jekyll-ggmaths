@@ -12,7 +12,7 @@ custom_css: secondary
         <h3 class="fancy-text font-4 ">Grades 4 - 6</h3>
 
         {% for pdf in site.static_files %}
-            {% if pdf.path contains 'Grade_4-6' %}
+            {% if pdf.path contains 'gcse_topics/Grade_4-6' %}
                 {% for paper in pdf.path %}
                     <li><a target="_blank" rel="noopener" href="{{ site.url }}{{ pdf.path }}">{{ pdf.name | replace: '_', " " | remove: ".pdf"}}</a></li>
                 {% endfor %}
