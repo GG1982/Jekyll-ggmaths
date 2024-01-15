@@ -203,7 +203,7 @@ header {
 .tutoring-subjects-container {
   display: grid;
   grid-template-areas: 
-  "a ."
+  "a a"
   "b c"
   "d e";
   width: min(100%, 70em);

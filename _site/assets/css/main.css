@@ -179,7 +179,7 @@ header {
 
 .tutoring-subjects-container {
   display: grid;
-  grid-template-areas: "a ." "b c" "d e";
+  grid-template-areas: "a a" "b c" "d e";
   width: min(100%, 70em);
   margin-inline: auto;
   grid-template-columns: repeat(auto-fit, minmax(min(400px, 100%), 1fr));
@@ -630,6 +630,22 @@ a {
   -moz-background-clip: text;
   -moz-text-fill-color: transparent;
   text-transform: capitalize;
+}
+
+.ch-50 {
+  max-width: 50ch;
+}
+
+.ch-60 {
+  max-width: 60ch;
+}
+
+.ch-70 {
+  max-width: 70ch;
+}
+
+.ch-80 {
+  max-width: 80ch;
 }
 
 /* Fade Animations */
