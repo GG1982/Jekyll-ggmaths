@@ -386,12 +386,15 @@ custom_css: secondary
                 {% endfor %}
             </ul>
             <ul class="mocks">
-                <li><a href="#">Mock</a></li>
-                <li><a href="#">Mock</a></li>
-                <li><a href="#">Mock</a></li>
-                <li><a href="#">Mock</a></li>
-                <li><a href="#">Mock</a></li>
-                <li><a href="#">Mock</a></li>
+                {% assign i = 0 %}
+                {% for pdf in site.static_files %}
+                    {% if pdf.path contains 'paper_1_mock/Grade 8' %}
+                        {% for paper in pdf.path %}
+                        {% assign i = i | plus:1 %}
+                            <li><a target="_blank" rel="noopener" href="{{ site.url }}{{ pdf.path }}">Mock {{ i }}</a></li>
+                        {% endfor %}
+                    {% endif %}
+                {% endfor %}
             </ul>
         </ul>
         <ul class="paper paper-2">
@@ -408,13 +411,15 @@ custom_css: secondary
                 {% endfor %}
             </ul>
             <ul class="mocks">
-                <li><a href="#">Mock</a></li>
-                <li><a href="#">Mock</a></li>
-                <li><a href="#">Mock</a></li>
-                <li><a href="#">Mock</a></li>
-                <li><a href="#">Mock</a></li>
-                <li><a href="#">Mock</a></li>
-                <li><a href="#">Mock</a></li>
+                {% assign i = 0 %}
+                {% for pdf in site.static_files %}
+                    {% if pdf.path contains 'paper_2_mock/Grade 8' %}
+                        {% for paper in pdf.path %}
+                        {% assign i = i | plus:1 %}
+                            <li><a target="_blank" rel="noopener" href="{{ site.url }}{{ pdf.path }}">Mock {{ i }}</a></li>
+                        {% endfor %}
+                    {% endif %}
+                {% endfor %}
             </ul>
         </ul>
         <ul class="paper paper-3">
@@ -431,12 +436,15 @@ custom_css: secondary
                 {% endfor %}
             </ul>
             <ul class="mocks">
-                <li><a href="#">Mock</a></li>
-                <li><a href="#">Mock</a></li>
-                <li><a href="#">Mock</a></li>
-                <li><a href="#">Mock</a></li>
-                <li><a href="#">Mock</a></li>
-                <li><a href="#">Mock</a></li>
+                {% assign i = 0 %}
+                {% for pdf in site.static_files %}
+                    {% if pdf.path contains 'paper_3_mock/Grade 8' %}
+                        {% for paper in pdf.path %}
+                        {% assign i = i | plus:1 %}
+                            <li><a target="_blank" rel="noopener" href="{{ site.url }}{{ pdf.path }}">Mock {{ i }}</a></li>
+                        {% endfor %}
+                    {% endif %}
+                {% endfor %}
             </ul>
         </ul>
     </div>
