@@ -128,6 +128,10 @@ header {
   width: fit-content;
 }
 
+.btn::before {
+  content: "";
+}
+
 .btn:hover {
   filter: brightness(0.6);
 }
@@ -468,7 +472,6 @@ header {
 .form-message {
   grid-column: 1 / -1;
 }
-
 
 .form-btn {
   cursor: pointer;
