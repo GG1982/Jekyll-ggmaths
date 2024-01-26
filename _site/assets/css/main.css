@@ -116,8 +116,8 @@ header {
 }
 
 .btn-inverse {
-  background-color: var(--light-clr);
-  color: var(--dark-clr);
+  background-color: rgba(10, 132, 246, 0.7);
+  color: var(--light-clr);
 }
 
 .btn-inverse:hover {
