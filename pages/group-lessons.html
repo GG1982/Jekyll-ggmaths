@@ -2,7 +2,9 @@
 layout: default
 title: "GCSE Group Lessons"
 permalink: /gcsegroups
-custom_css: group-lessons
+custom_css: 
+    - group-lessons
+    - secondary
 ---
 
 <main>
@@ -17,11 +19,94 @@ custom_css: group-lessons
             <div class="group-hero-body-btn">
                 <p class="ch-70"><span class="block">Getting a Grade 4 can be hard. I make it easy.</span>Access my FREE guide to see how.</p>
                 <a href="#" class="btn font-0">Show Me!</a> 
-
                 <a target="_blank" rel="noopener" href="https://www.google.com/search?q=ggmaths&rlz=1C5CHFA_enGB1048GB1048&oq=ggmaths+&aqs=chrome.0.69i59j0i546l2j69i60l2.1992j0j4&sourceid=chrome&ie=UTF-8#lrd=0x48761923e87f01e1:0xb59e62c483b997c,1,,,," class="body-link capitalize ">5* google reviews</a>
             </div>
         </div>
     </section>
+
+
+        <!-- Grade 4 -->
+        <section>
+            <h2 id="grade-4" class="grade-title font-4 text-center fancy-text">Grade 4 exams</h2>
+            <div class="lists">
+                <ul class="paper paper-1">
+                    <h3 class="paper-title fancy-text">Paper 1H <span class="block">non-calculator</span></h3>
+                    <ul class="booklets">
+                        {% assign i = 0 %}
+                        {% for pdf in site.static_files %}
+                            {% if pdf.path contains 'paper_1_exam/Grade 4' %}
+                                {% for paper in pdf.path %}
+                                {% assign i = i | plus:1 %}
+                                    <li><a target="_blank" rel="noopener" href="{{ site.url }}{{ pdf.path }}">Exam {{ i }}</a></li>
+                                {% endfor %}
+                            {% endif %}
+                        {% endfor %}
+                    </ul>
+                    <ul class="mocks">
+                        {% assign i = 0 %}
+                        {% for pdf in site.static_files %}
+                            {% if pdf.path contains 'paper_1_mock/Grade 4' %}
+                                {% for paper in pdf.path %}
+                                {% assign i = i | plus:1 %}
+                                    <li><a target="_blank" rel="noopener" href="{{ site.url }}{{ pdf.path }}">Mock {{ i }}</a></li>
+                                {% endfor %}
+                            {% endif %}
+                        {% endfor %}
+                    </ul>
+                </ul>
+                <ul class="paper paper-2">
+                    <h3 class="paper-title fancy-text">Paper 2H <span class="block">calculator</span></h3>
+                    <ul class="booklets">
+                        {% assign i = 0 %}
+                        {% for pdf in site.static_files %}
+                            {% if pdf.path contains 'paper_2_exam/Grade 4' %}
+                                {% for paper in pdf.path %}
+                                {% assign i = i | plus:1 %}
+                                    <li><a target="_blank" rel="noopener" href="{{ site.url }}{{ pdf.path }}">Exam {{ i }}</a></li>
+                                {% endfor %}
+                            {% endif %}
+                        {% endfor %}
+                    </ul>
+                    <ul class="mocks">
+                        {% assign i = 0 %}
+                        {% for pdf in site.static_files %}
+                            {% if pdf.path contains 'paper_2_mock/Grade 4' %}
+                                {% for paper in pdf.path %}
+                                {% assign i = i | plus:1 %}
+                                    <li><a target="_blank" rel="noopener" href="{{ site.url }}{{ pdf.path }}">Mock {{ i }}</a></li>
+                                {% endfor %}
+                            {% endif %}
+                        {% endfor %}
+                    </ul>
+                </ul>
+                <ul class="paper paper-3">
+                    <h3 class="paper-title fancy-text">Paper 3H <span class="block">calculator</span></h3>
+                    <ul class="booklets">
+                        {% assign i = 0 %}
+                        {% for pdf in site.static_files %}
+                            {% if pdf.path contains 'paper_3_exam/Grade 4' %}
+                                {% for paper in pdf.path %}
+                                {% assign i = i | plus:1 %}
+                                    <li><a target="_blank" rel="noopener" href="{{ site.url }}{{ pdf.path }}">Exam {{ i }}</a></li>
+                                {% endfor %}
+                            {% endif %}
+                        {% endfor %}
+                    </ul>
+                    <ul class="mocks">
+                        {% assign i = 0 %}
+                        {% for pdf in site.static_files %}
+                            {% if pdf.path contains 'paper_3_mock/Grade 4' %}
+                                {% for paper in pdf.path %}
+                                {% assign i = i | plus:1 %}
+                                    <li><a target="_blank" rel="noopener" href="{{ site.url }}{{ pdf.path }}">Mock {{ i }}</a></li>
+                                {% endfor %}
+                            {% endif %}
+                        {% endfor %}
+                    </ul>
+                </ul>
+            </div>
+        </section>
+
 
     <section class="about-group">
         <div>    
@@ -78,6 +163,13 @@ custom_css: group-lessons
                 <li>Proven study techniques and shortcuts</li>
                 <li>Exclusive study materials and resources</li>
             </ul>
+
+            <div>
+                <p class="font--1">Dates: 15 - 16 Feb 2024</p>
+                <p class="font--1">Time: 11:00 am - 02:00 pm</p>
+                <p class="font--1">Price: £200</p>
+            </div>
+
 
         </div>
     </section>
