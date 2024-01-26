@@ -44,17 +44,27 @@
   display: grid;
   width: min(100%, 70em);
   margin-inline: auto;
-  gap: 2em;
-  grid-template-columns: 1fr 1fr;
+  column-gap: 4em;
+  grid-template-areas: "title body" "form  body";
 }
 
-@media only screen and (max-width: 700px) {
+.about-group_title {
+  grid-area: title;
+}
+
+.about-group_form {
+  grid-area: form;
+}
+
+.about-group_body {
+  grid-area: body;
+  display: grid;
+  gap: 2em;
+}
+
+@media only screen and (max-width: 750px) {
   .about-group {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-  }
-  .about-group > div:nth-child(2) {
-    order: -1;
+    grid-template-areas: "title" "body" "form";
   }
 }
 .about-group > div:nth-child(2) {
