@@ -34,9 +34,9 @@ body {
 }
 
 body > * {
-  width: min(100% - 2rem, 90em, 90vw);
   margin-inline: auto;
   overflow-x: hidden;
+  width: min(100% - 2rem, 90em, 90vw);
 }
 
 main {
@@ -370,11 +370,6 @@ header {
 }
 
 /* Form */
-.form-section {
-  width: min(65em, 100%);
-  margin-inline: auto;
-}
-
 .form-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -539,7 +534,7 @@ select {
 }
 
 h1 {
-  line-height: 1.8;
+  line-height: 1.5;
   font-size: var(--step-4);
 }
 

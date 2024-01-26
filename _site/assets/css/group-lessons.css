@@ -1,3 +1,92 @@
+@charset "UTF-8";
+.group-hero {
+  display: grid;
+  place-items: center;
+  isolation: isolate;
+  position: relative;
+  text-align: center;
+}
 
+.group-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("{{ site.baseurl }}/assets/images/class_of_students.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 20px;
+  z-index: -1;
+  opacity: 0.3;
+}
+
+.group-hero-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3em;
+  padding-inline: 2em;
+  padding-block: 6em;
+  justify-content: center;
+}
+
+.group-hero-body-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5em;
+}
+
+.about-group {
+  display: grid;
+  width: min(100%, 70em);
+  margin-inline: auto;
+  gap: 2em;
+  grid-template-columns: 1fr 1fr;
+}
+
+.about-group > div:nth-child(2) {
+  display: grid;
+  gap: 1.5em;
+}
+
+.group-benefits {
+  list-style-position: inside;
+  display: grid;
+  gap: 0.5em;
+}
+
+.group-benefits > li::marker {
+  content: "✅ ";
+}
+
+.group-contact {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 1em;
+  margin-block: 1em 2em;
+}
+
+.group-contact > a {
+  font-size: var(--step-1);
+  text-decoration: underline;
+  color: #26e3c2;
+}
+
+.group-form-section {
+  width: min(65em, 100%);
+  margin-inline: auto;
+}
+
+.group-form-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media only screen and (max-width: 700px) {
+  .group-form-container {
+    gap: 2rem;
+  }
+}
 
 /*# sourceMappingURL=group-lessons.css.map */

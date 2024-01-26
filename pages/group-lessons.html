@@ -2,104 +2,84 @@
 layout: default
 title: "GCSE Group Lessons"
 permalink: /gcsegroups
-custom_css: secondary
+custom_css: group-lessons
 ---
 
 <main>
-    <section id="hero" class="hero">
-        <div class="hero-body">
-            <div class="hero-body-title">               
+    <section id="hero" class="group-hero">
+
+        <div class="group-hero-body">
+            <div class="group-hero-body-title">               
                 <h2 class="font-0 block capitalize">students</h2>
-                <h1 class="font-3 fancy-text capitalize">Are you tired of struggling with maths?</h1>
-                <p class="ch-70"><span class="block">Getting a Grade 4 can be hard. I make it easy.</span>Access my FREE guide to see how.</p>
+                <h1 class="font-4 fancy-text capitalize">Ace your GCSEs in just two days!</h1>
             </div>
-                
-            <div class="hero-body-btn">
-                <a href="#" class="btn btn-inverse font-0">Show Me!</a> 
+            
+            <div class="group-hero-body-btn">
+                <p class="ch-70"><span class="block">Getting a Grade 4 can be hard. I make it easy.</span>Access my FREE guide to see how.</p>
+                <a href="#" class="btn font-0">Show Me!</a> 
                 <!-- <a target="_blank" rel="noopener" href="https://www.google.com/search?q=ggmaths&rlz=1C5CHFA_enGB1048GB1048&oq=ggmaths+&aqs=chrome.0.69i59j0i546l2j69i60l2.1992j0j4&sourceid=chrome&ie=UTF-8#lrd=0x48761923e87f01e1:0xb59e62c483b997c,1,,,," class="btn font-0">view google reviews</a> -->
             </div>
         </div>
     </section>
 
+    <section class="about-group">
+        <div>    
+            <h2>About</h3>
+            <h2 class="fancy-text font-3">GCSE Bootcamp</h2>
 
-    <section>
-        <h2 id="grade-4" class="grade-title font-4 text-center fancy-text">Grade 4 exams</h2>
-        <div class="lists">
-            <ul class="paper paper-1">
-                <h3 class="paper-title fancy-text">Paper 1H <span class="block">non-calculator</span></h3>
-                <ul class="booklets">
-                    {% assign i = 0 %}
-                    {% for pdf in site.static_files %}
-                        {% if pdf.path contains 'paper_1_exam/Grade 4' %}
-                            {% for paper in pdf.path %}
-                            {% assign i = i | plus:1 %}
-                                <li><a target="_blank" rel="noopener" href="{{ site.url }}{{ pdf.path }}">Exam {{ i }}</a></li>
-                            {% endfor %}
-                        {% endif %}
-                    {% endfor %}
-                </ul>
-                <ul class="mocks">
-                    {% assign i = 0 %}
-                    {% for pdf in site.static_files %}
-                        {% if pdf.path contains 'paper_1_mock/Grade 4' %}
-                            {% for paper in pdf.path %}
-                            {% assign i = i | plus:1 %}
-                                <li><a target="_blank" rel="noopener" href="{{ site.url }}{{ pdf.path }}">Mock {{ i }}</a></li>
-                            {% endfor %}
-                        {% endif %}
-                    {% endfor %}
-                </ul>
+
+            <div class="group-contact">
+                <a href="https://wa.me/447956519802?text=Hi%20Giuliano!%20" target="_blank"
+                rel="noreferrer noopener"><i class="bi bi-whatsapp"></i> Message me</a>
+                <a href="https://maps.app.goo.gl/ZFvfzKkRroHoPUeNA"
+                target="_blank" rel="noreferrer noopener"><i class="bi bi-geo-fill"></i> Woodhouse College</a>
+            </div>
+
+
+            <form class="group-form-container" action="https://formsubmit.co/e0752bbc7e692b41b24440f222355e73" method="POST">
+                <!-- Subject line -->
+                <input type="hidden" name="_subject" value="Inquiry - Maths Tutoring - Giuliano">
+                
+                <!-- Avoid spam by fooling scrapers -->
+                <input type="text" name="_honey" class="is-hidden">
+            
+                <!-- Autoresponse to users with copy of submission -->
+                <input type="hidden" name="_autoresponse"
+                    value="Your submission has been received, and I will contact you as soon as possible. Thank you, Giuliano.">
+                <div class="form-item form-name">
+                    <!-- <label class="capitalize" for="Name">Your Name</label> -->
+                    <input name="Name" id="name" type="text" class="form-input" placeholder="Full Name" aria-label="Your name" required>
+                </div>
+                <div class="form-item form-email">
+                    <!-- <label class="capitalize" for="Email">Your Email</label> -->
+                    <input name="Email" id="email" type="email" class="form-input" placeholder="Email Address" aria-label="Your email" required>
+                </div>
+                <div class="form-item form-phone">
+                    <!-- <label class="capitalize" for="Phone">your mobile</label> -->
+                    <input name="Phone" id="phone" type="tel" class="form-input" placeholder="Mobile Number" aria-label="Your Phone Number" required>
+                </div>
+            
+                <button class="block form-btn" type="submit">Send <i class="bi bi-arrow-up-right"></i></i></button>
+            </form>
+        </div>
+        
+        <div>
+            <div>
+                <h3>Struggling to crack those GCSE exams?</p>
+                <h4>I'll equip you with the tools and strategies to conquer them with confidence 💪</p>
+            </div>
+            <ul class="group-benefits">
+                <h3 class="capitalize">What you'll experience:</h3>
+                <li>Details on the most common topics</li>
+                <li>The exact topics to study for a pass</li>
+                <li>Exam strategy to maximise your result</li>
+                <li>Past exam questions arranged by grade and topic</li>
+                <li>Proven study techniques and shortcuts</li>
+                <li>Exclusive study materials and resources</li>
             </ul>
-            <ul class="paper paper-2">
-                <h3 class="paper-title fancy-text">Paper 2H <span class="block">calculator</span></h3>
-                <ul class="booklets">
-                    {% assign i = 0 %}
-                    {% for pdf in site.static_files %}
-                        {% if pdf.path contains 'paper_2_exam/Grade 4' %}
-                            {% for paper in pdf.path %}
-                            {% assign i = i | plus:1 %}
-                                <li><a target="_blank" rel="noopener" href="{{ site.url }}{{ pdf.path }}">Exam {{ i }}</a></li>
-                            {% endfor %}
-                        {% endif %}
-                    {% endfor %}
-                </ul>
-                <ul class="mocks">
-                    {% assign i = 0 %}
-                    {% for pdf in site.static_files %}
-                        {% if pdf.path contains 'paper_2_mock/Grade 4' %}
-                            {% for paper in pdf.path %}
-                            {% assign i = i | plus:1 %}
-                                <li><a target="_blank" rel="noopener" href="{{ site.url }}{{ pdf.path }}">Mock {{ i }}</a></li>
-                            {% endfor %}
-                        {% endif %}
-                    {% endfor %}
-                </ul>
-            </ul>
-            <ul class="paper paper-3">
-                <h3 class="paper-title fancy-text">Paper 3H <span class="block">calculator</span></h3>
-                <ul class="booklets">
-                    {% assign i = 0 %}
-                    {% for pdf in site.static_files %}
-                        {% if pdf.path contains 'paper_3_exam/Grade 4' %}
-                            {% for paper in pdf.path %}
-                            {% assign i = i | plus:1 %}
-                                <li><a target="_blank" rel="noopener" href="{{ site.url }}{{ pdf.path }}">Exam {{ i }}</a></li>
-                            {% endfor %}
-                        {% endif %}
-                    {% endfor %}
-                </ul>
-                <ul class="mocks">
-                    {% assign i = 0 %}
-                    {% for pdf in site.static_files %}
-                        {% if pdf.path contains 'paper_3_mock/Grade 4' %}
-                            {% for paper in pdf.path %}
-                            {% assign i = i | plus:1 %}
-                                <li><a target="_blank" rel="noopener" href="{{ site.url }}{{ pdf.path }}">Mock {{ i }}</a></li>
-                            {% endfor %}
-                        {% endif %}
-                    {% endfor %}
-                </ul>
-            </ul>
+
         </div>
     </section>
+
+    
 </main>
