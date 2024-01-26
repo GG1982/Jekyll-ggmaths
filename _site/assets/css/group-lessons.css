@@ -11,7 +11,7 @@
   content: "";
   position: absolute;
   inset: 0;
-  background-image: url("{{ site.baseurl }}/assets/images/class_of_students.jpg");
+  background-image: url("/assets/images/class_of_students.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   border-radius: 20px;
