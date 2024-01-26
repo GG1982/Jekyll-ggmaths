@@ -47,7 +47,16 @@
     gap: 2em;
     grid-template-columns: 1fr 1fr;
 }
+@media only screen and (max-width: 700px) {
+    .about-group {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
 
+    .about-group > div:nth-child(2) {
+        order: -1;
+    }
+  }
 .about-group > div:nth-child(2) {
     display: grid;
     gap: 1.5em;
@@ -67,7 +76,8 @@
 .group-contact {
     display: flex;
     justify-content: space-between;
-    column-gap: 1em;
+    flex-wrap: wrap;
+    gap: 1em;
     margin-block: 1em 2em;
   }
 .group-contact > a {
