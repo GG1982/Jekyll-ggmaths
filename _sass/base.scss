@@ -47,11 +47,11 @@ body {
 body > * {
   margin-inline: auto;
   overflow-x: hidden;
-  width: min(100% - 2rem, 90em, 85vw);
+  width: min(100% - 2rem, 90em, 90vw);
 }
 
 main {
-  --section-gap: 10rem;
+  --section-gap: 8rem;
   display: grid;
   grid-template-columns: 1fr;
   gap: var(--section-gap);
@@ -64,6 +64,12 @@ main > section:last-child {
 main p {
   opacity: var(--text-opacity);
   font-size: var(--step-0);
+}
+
+@media only screen and (max-width: 700px) {
+  main {
+    --section-gap: 2rem;
+  }
 }
 
 .scroll-top {
@@ -86,15 +92,16 @@ header {
   justify-content: space-evenly;
 }
 
-// @media only screen and (max-width: 700px) {
-//   header {
-//       padding-block: var(--nav-gap);
-//   }
-//   .logo,
-//   .nav-header .btn {
-//       display: none;
-//   }
-// }
+@media only screen and (max-width: 700px) {
+  header {
+      padding-block: 1em;
+      margin-bottom: 2em;
+  }
+  .logo,
+  .nav-header .btn {
+      display: none;
+  }
+}
 
 .nav-header {
   display: flex;
