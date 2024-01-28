@@ -18,90 +18,11 @@ custom_css:
             
             <div class="group-hero-body-btn">
                 <p class="ch-70 font-1"><span class="block">Getting a Grade 4 can be hard. I make it easy.</span>Access my FREE guide to see how.</p>
-                <a href="#how-to-get-a-grade-4" class="btn font-0">Show Me!</a> 
+                <a target="_blank" rel="noopener" href="{{ site.url }}/free-resources" class="btn font-0">Show Me!</a> 
                 <a target="_blank" rel="noopener" href="https://www.google.com/search?q=ggmaths&rlz=1C5CHFA_enGB1048GB1048&oq=ggmaths+&aqs=chrome.0.69i59j0i546l2j69i60l2.1992j0j4&sourceid=chrome&ie=UTF-8#lrd=0x48761923e87f01e1:0xb59e62c483b997c,1,,,," class="body-link capitalize ">5* google reviews</a>
             </div>
         </div>
     </section>
-
-
-        <!-- Grade 4 -->
-        <section>
-            <div class="grade-4-title" id="how-to-get-a-grade-4">
-                <div>
-                    <h2 id="grade-4" class="grade-title font-4 text-center fancy-text">How to get a grade 4!</h2>
-                    <h4 class="text-center font-1 capitalize">All grade 4 exam questions with video solutions</h4>
-                </div>
-                <div>
-                    <p class="ch-70 mb-2">What you see here are the first four questions from every single exam paper going back to 2017.</p>
-                    <p class="ch-70 mb-2">I've put these in orders of papers one, two, and three, and then arranged these into booklets of about eight questions each.</p>
-                    <p class="ch-70 mb-2">What this means for you is that if you can score 100% on these booklets, you can be confident of achieving a grade 4.</p>
-                    <p class="ch-70 mb-2">Ready for the challenge?</p>
-                </div>
-            </div>
-
-            <div class="lists">
-                <ul class="paper paper-1">
-                    <h3 class="paper-title fancy-text">Paper 1H <span class="block">non-calculator</span></h3>
-                    <ul class="booklets">
-                        {% assign i = 0 %}
-                        {% for pdf in site.static_files %}
-                            {% if pdf.path contains 'paper_1_exam/Grade 4' %}
-                                {% for paper in pdf.path %}
-                                {% assign i = i | plus:1 %}
-                                    <li><a target="_blank" rel="noopener" href="{{ site.url }}{{ pdf.path }}">Exam {{ i }}</a></li>
-                                {% endfor %}
-                            {% endif %}
-                        {% endfor %}
-
-                    </ul>
-                    <ul class="mocks">
-                        {% for page in site.data.videos.grade_4_paper_1_links %}
-                            <li><a target="_blank" rel="noopener" href="{{ page.url }}">{{ page.name }} <i class="bi bi-youtube"></i> </a></li>
-                        {% endfor %}
-                    </ul>
-                </ul>
-                <ul class="paper paper-2">
-                    <h3 class="paper-title fancy-text">Paper 2H <span class="block">calculator</span></h3>
-                    <ul class="booklets">
-                        {% assign i = 0 %}
-                        {% for pdf in site.static_files %}
-                            {% if pdf.path contains 'paper_2_exam/Grade 4' %}
-                                {% for paper in pdf.path %}
-                                {% assign i = i | plus:1 %}
-                                    <li><a target="_blank" rel="noopener" href="{{ site.url }}{{ pdf.path }}">Exam {{ i }}</a></li>
-                                {% endfor %}
-                            {% endif %}
-                        {% endfor %}
-                    </ul>
-                    <ul class="mocks">
-                        {% for page in site.data.videos.grade_4_paper_2_links %}
-                            <li><a target="_blank" rel="noopener" href="{{ page.url }}">{{ page.name }} <i class="bi bi-youtube"></i> </a></li>
-                        {% endfor %}
-                    </ul>
-                </ul>
-                <ul class="paper paper-3">
-                    <h3 class="paper-title fancy-text">Paper 3H <span class="block">calculator</span></h3>
-                    <ul class="booklets">
-                        {% assign i = 0 %}
-                        {% for pdf in site.static_files %}
-                            {% if pdf.path contains 'paper_3_exam/Grade 4' %}
-                                {% for paper in pdf.path %}
-                                {% assign i = i | plus:1 %}
-                                    <li><a target="_blank" rel="noopener" href="{{ site.url }}{{ pdf.path }}">Exam {{ i }}</a></li>
-                                {% endfor %}
-                            {% endif %}
-                        {% endfor %}
-                    </ul>
-                    <ul class="mocks">
-                        {% for page in site.data.videos.grade_4_paper_3_links %}
-                            <li><a target="_blank" rel="noopener" href="{{ page.url }}">{{ page.name }} <i class="bi bi-youtube"></i> </a></li>
-                        {% endfor %}
-                    </ul>
-                </ul>
-            </div>
-        </section>
-
 
     <section class="about-group">
 

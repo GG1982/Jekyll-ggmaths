@@ -116,7 +116,7 @@
   display: grid;
   place-items: center;
   margin-inline: auto;
-  gap: 1em;
+  gap: 3rem;
   width: min(100%, 70em);
 }
 
