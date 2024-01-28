@@ -117,3 +117,13 @@
         gap: 2rem;
     }
 }
+
+
+.grade-4-title {
+    display: grid;
+    place-items: center;
+    margin-inline: auto;
+    // background-color: red;
+    gap: 1em;
+    width: min(100%, 70em);
+}

@@ -56,7 +56,7 @@ main {
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: 1fr;
 
-    width: min(95%, 70em);
+    width: min(90%, 70em);
     margin-inline: auto;
     margin-top: 2em;
     padding-block: 1em;
@@ -92,6 +92,13 @@ main {
     font-size: var(--step-0);
     padding-block: 1.25em;
     margin-block: 0.25em;
+}
+
+@media (max-width: 850px) {
+    .booklets > li,
+    .mocks > li  {
+        padding-block: 0.7em;
+    }
 }
 
 .booklets a,

@@ -112,5 +112,12 @@
     gap: 2rem;
   }
 }
+.grade-4-title {
+  display: grid;
+  place-items: center;
+  margin-inline: auto;
+  gap: 1em;
+  width: min(100%, 70em);
+}
 
 /*# sourceMappingURL=group-lessons.css.map */

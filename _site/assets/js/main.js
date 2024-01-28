@@ -28,3 +28,6 @@ function scrollfunciton() {
         scrollToTop.style.display = "none";
     }
 }
+
+// Groups Dialog
+
