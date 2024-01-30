@@ -61,7 +61,7 @@
     margin-top: 2em;
     padding-block: 1em;
     border-radius: 1em;
-    background-color: #1a1a1a;
+    background-color: var(--background-colour-2);
     box-shadow: var(--nice-shadow);
 }
 @media (max-width: 850px) {
@@ -90,7 +90,7 @@
     display: grid;
     place-content: center;
     font-size: var(--step-0);
-    padding-block: 1.25em;
+    padding-block: 0.9em;
     margin-block: 0.25em;
 }
 
@@ -108,20 +108,26 @@
 
 .booklets > li:nth-child(2n+1),
 .mocks > li:nth-child(2n+1) {
-    background-color: hsl(195, 26%, 82%);
+    background-color: #48d6d2;
     // filter: brightness(1.2);
 }
 
 .booklets > li:nth-child(2n+1) > a,
 .mocks > li:nth-child(2n+1) > a{
-    color: black;
+    // color: #fff;
 }
 
 .booklets > li:nth-child(2n),
 .mocks > li:nth-child(2n) {
-    background-color: hsl(210, 52%, 20%);
+    background-color: #2a6fdb
     // filter: brightness(1.2);
 }
+
+.booklets > li:nth-child(2n) > a,
+.mocks > li:nth-child(2n) > a{
+    color: #fff;
+}
+
 
 .booklets > li:first-child {
     border-top-left-radius: 10px;

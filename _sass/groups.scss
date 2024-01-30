@@ -1,60 +1,60 @@
-.group-hero {
-    display: grid;
-    place-items: center;
-    isolation: isolate;
-    position: relative;
+// .group-hero {
+//     display: grid;
+//     place-items: center;
+//     isolation: isolate;
+//     position: relative;
 
-    text-align: center;
-}
+//     text-align: center;
+//     background-image: url("/assets/images/class_of_students.jpg");
+//     background-size: cover;
+//     background-repeat: no-repeat;
+//     border-radius: 20px;
+// }
 
-.group-hero::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background-image: url("/assets/images/class_of_students.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    border-radius: 20px;
-    z-index: -1;
-    opacity: 0.25;
-}
+// .group-hero::after {
+//     content: "";
+//     position: absolute;
+//     border-radius: inherit;
+//     inset: 0;
+//     z-index: -1;
+//     opacity: 0.5;
+//     // background-color: #355f08;
+//     mix-blend-mode:lighten;
+// }
 
-.group-hero-body-title > h1 {
-    font-size: var(--step-5);
-}
+// .group-hero-body-title > h1 {
+//     font-size: var(--step-5);
+// }
 
-.group-hero-body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 3em;
+// .group-hero-body {
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+//     gap: 3em;
 
-    padding-inline: 2em;
-    padding-block: 6em;
+//     padding-inline: 2em;
+//     padding-block: 6em;
 
-    justify-content: center;
-}
-@media only screen and (max-width: 700px) {
+//     justify-content: center;
+// }
+// @media only screen and (max-width: 700px) {
 
-    .group-hero-body-title > h1 {
-        font-size: var(--step-3);
-    }
+//     .group-hero-body-title > h1 {
+//         font-size: var(--step-3);
+//     }
 
-    .group-hero-body  {
-        padding-inline: 0.75em;
-        padding-block: 3em;
-    }
-}
-.group-hero-body-btn {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1.5em;
-}
+//     .group-hero-body  {
+//         padding-inline: 0.75em;
+//         padding-block: 3em;
+//     }
+// }
+// .group-hero-body-btn {
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+//     gap: 1.5em;
+// }
 
-.google-reviews-img {
-    width: 350px;
-}
 
 .about-group {
     margin-top: -6em;
@@ -115,7 +115,7 @@
 .group-contact > a {
     font-size: var(--step-1);
     text-decoration: underline;
-    color: #26e3c2
+    color: var(--clr-accent);
 }
 
 

@@ -8,11 +8,13 @@
   --step-4: clamp(2.33rem, calc(2.08rem + 1.25vw), 3.05rem);
   --step-5: clamp(2.80rem, calc(2.45rem + 1.77vw), 3.82rem);
 
-  --dark-clr: #0f0f0f;
-  --dark-clr-2: #1A1A1A;
-  --light-clr: rgb(220, 220, 220);
-  --clr-accent: #45a0f5;
-  --clr-accent-2: #26e3c2;
+  --background-colour: #f5f5f5;
+  --background-colour-2: #f1f1f1;
+  --font-clr: #1c375b;
+  --clr-accent: #0468BF;
+  --clr-accent-2: #049DD9;
+
+
 
   // --text-opacity: 0.9;
   --opacity-hover: 0.7;
@@ -21,7 +23,9 @@
   --body-content-width: 65em;
   --fade-duration: 300ms;
 
-  --nice-shadow: 0 -2px 10px var(--clr-accent-2);
+  // box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  --nice-shadow: 0px -1px 5px var(--font-clr);
+  --card-border-radius: 10px;
 
   --body-font: 'Kumbh Sans', sans-serif;
 
@@ -30,14 +34,14 @@
 
 
 body {
-  background-color: var(--dark-clr);
-  color: var(--light-clr);
+  background-color: var(--background-colour);
+  color: var(--font-clr);
   font-family: var(--body-font);
   overflow-x: hidden;
   
   display: grid;
   grid-template-rows: auto 1fr auto;
-  background-image: radial-gradient(rgba(22, 72, 49, 0.6) 1px, transparent 0);
+  background-image: radial-gradient(rgba(19, 152, 90, 0.9) 1px, transparent 0);
   background-size: 35px 35px;
   background-attachment: fixed;
 }
@@ -127,28 +131,21 @@ header {
 }
 
 .btn {
-  border: 2px solid var(--light-clr);
+  border: 2px solid var(--font-clr);
   padding: 0.5rem 1.8rem;
   border-radius: 40px;
-  background-color: var(--dark-clr);
-  color: #26e3c2;
+  background-color: var(--background-colour);
+  color: var(--clr-accent);
   width: fit-content;
 }
 
-.btn::before {
-  content: "";
-}
-
-.btn:hover {
-  filter: brightness(0.6);
-}
-
 .btn-inverse {
-  background-color: rgba(10, 132, 246, 0.7);
-  color: var(--light-clr);
+  background-color: var(--clr-accent-2);
+  color: var(--font-clr);
 } 
+.btn:hover,
 .btn-inverse:hover {
-  filter: brightness(0.6);
+  opacity: 0.8;
 }
 
 /* Main */
@@ -157,7 +154,7 @@ header {
 .hero {
   display: grid;
   min-height: calc(100vh - 10em);
-  min-height: calc(100svh - 10em);
+  min-height: calc(100svh - 20em);
   place-items: center;
   padding-top: 4em;
 }
@@ -182,6 +179,7 @@ header {
 
 .hero_contact {
   display: flex;
+  align-items: center;
   gap: 2em;
   flex-wrap: wrap;
   // flex-direction: column;
@@ -190,6 +188,7 @@ header {
 .hero-body_img {
   object-fit: cover;
   border-radius: 4em;
+  min-height: 500px;
   max-height: 600px;
 }
 
@@ -210,6 +209,7 @@ header {
   }
 
   .hero-body_img {
+    min-height: 300px;
     max-height: 400px;
   }
 }
@@ -220,7 +220,7 @@ header {
   grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
   column-gap: 2em;
   row-gap: 3em;
-  width: 100%;
+  margin-inline: auto;
 }
 
 .tutoring-subjects-container {
@@ -265,10 +265,9 @@ header {
   grid-area: e;
 }
 .card {
-  background-color: var(--dark-clr-2);
+  background-color: var(--background-colour-2);
   padding: 20% 1rem 1rem;
-  border: 1px solid rgb(42, 42, 42);
-
+  border: 1px solid var(--clr-accent);
   width: fit-content;
 
   display: flex;
@@ -381,7 +380,7 @@ header {
 }
 
 .pricing-card {
-  background-color: var(--dark-clr-2);
+  background-color: var(--background-colour-2);
   padding: 20% 1rem 1rem;
   border: 1px solid rgb(42, 42, 42);
 
@@ -416,10 +415,9 @@ header {
   page-break-inside: avoid;
   
   margin-top: 2rem;
-  background-color: var(--dark-clr-2);
+  background-color: var(--background-colour-2);
   padding: 20% 1rem 2rem;
   border: 1px solid rgb(42, 42, 42);
-  border-radius: 20px;
 
   display: flex;
   flex-direction: column;
@@ -444,6 +442,8 @@ header {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
+  width: min(95%, 60em);
+  margin-inline: auto;
 }
 @media only screen and (max-width: 700px) {
   .form-container {
@@ -460,7 +460,7 @@ header {
 .contact-other > a {
   font-size: var(--step-2);
   text-decoration: underline;
-  color: #26e3c2
+  color: var(--clr-accent-2);
 }
 .contact-other > a:hover {
   opacity: var(--opacity-hover);
@@ -480,11 +480,10 @@ header {
 .form-item > input,
 .form-item > textarea, 
 .form-item > select {
-  background-color: rgb(42, 42, 42);
+  background-color: var(--background-colour-2);
   border: none;
-  width: 100%;
   padding: 0.5rem 1rem;
-  color: var(--light-clr);
+  color: var(--font-clr);
   resize: vertical;
 }
 
@@ -497,9 +496,13 @@ header {
   grid-column: 1 / -1;
   border: none;
   border-radius: 20px;
-  color: var(--dark-clr);
+  color: var(--background-colour);
   font-size: var(--step-1);
-  background-image: var(--linear-grad)
+  background-image: var(--linear-grad);
+}
+
+.form-btn:hover {
+  opacity: var(--opacity-hover);
 }
 
 

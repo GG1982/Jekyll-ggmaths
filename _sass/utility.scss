@@ -17,11 +17,14 @@ a {
   text-transform: capitalize; 
   color: var(--light-clr);
 }
+a:hover {
+  opacity: var(--opacity-hover);
+}
 
 
 .body-link {
   text-transform: lowercase;
-  color: var(--clr-accent-2);
+  color: var(--clr-accent);
   text-decoration: underline;
 }
 .body-link:hover {
@@ -30,6 +33,19 @@ a {
 
 .is-hidden {
   display: none;
+}
+
+.box-shadow {
+  box-shadow: var(--nice-shadow);
+}
+
+.card-border-radius {
+  border-radius: var(--card-border-radius);
+}
+
+.card-width {
+  width: 98%;
+  margin-inline: auto;
 }
 /* Font Size */
 .font--2 {
