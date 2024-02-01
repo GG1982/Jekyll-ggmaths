@@ -171,6 +171,14 @@ header {
   border-radius: 4em;
   min-height: 500px;
   max-height: 600px;
+  position: relative;
+}
+
+.hero-body_img::after {
+  position: absolute;
+  content: "";
+  background-color: red;
+  inset: -1;
 }
 
 @media only screen and (max-width: 800px) {
