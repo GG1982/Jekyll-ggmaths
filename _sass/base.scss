@@ -90,27 +90,17 @@ main p {
 
 /* Header */
 header {
-  --nav-gap: 2em;
   display: flex;
   padding-block: 2em;
   justify-content: space-evenly;
 }
 
-@media only screen and (max-width: 700px) {
-  header {
-      padding-block: 1em;
-      margin-bottom: 2em;
-  }
-  .logo,
-  .nav-header .btn {
-      display: none;
-  }
-}
 
 .nav-header {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--nav-gap);
+  column-gap: 2em;
+  row-gap: 1em;
   justify-content: space-evenly;
   align-items: center;
   flex-grow: 1;
@@ -118,7 +108,7 @@ header {
 
 .nav-header > ul {
   display: flex;
-  gap: var(--nav-gap);
+  gap: 2em;
 }
 .nav-link {
   opacity: var(--text-opacity);
@@ -129,6 +119,18 @@ header {
   color: var(--clr-accent-2);
   text-transform: capitalize;
 }
+@media only screen and (max-width: 700px) {
+  header {
+      padding-block: 1em;
+      margin-bottom: 1em;
+  }
+  header .btn {
+      display: none;
+  }
+}
+
+
+// Button Designs
 
 .btn {
   border: 2px solid var(--font-clr);
@@ -169,40 +171,30 @@ header {
 
 .hero-body_content {
   display: grid;
-  gap: 3em;
+  gap: 2em;
 }
 
 .hero-body-btn {
   display: grid;
-  gap: 2em;
+  gap: 1em;
 }
 
 .hero_contact {
   display: flex;
   align-items: center;
-  gap: 2em;
+  gap: 1em;
   flex-wrap: wrap;
   // flex-direction: column;
 }
 
+
+
 .hero-body_img {
   object-fit: cover;
-  border-radius: 4em;
   min-height: 500px;
   max-height: 600px;
-
-  position: relative;
+  border-radius: 2em;
 }
-
-
-.hero-body_img::after {
-  position: absolute;
-  content: "";
-  background-color: red;
-  inset: -1;
-}
-
-
 
 
 @media only screen and (max-width: 800px) {
