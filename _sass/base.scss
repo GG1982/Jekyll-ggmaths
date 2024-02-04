@@ -187,14 +187,31 @@ header {
   // flex-direction: column;
 }
 
+.hero-img-container {
+  --hero-img-border-radius: 2em;
+  position: relative;
+  border-radius: var(--hero-img-border-radius)
+}
 
+.hero-img-container::before {
+  content: "";
+  position: absolute;
+  border-radius: inherit;
+  inset: -3% 3% 3% -6%;
+  background-image: var(--linear-grad);
+  opacity: 0.3;
+  z-index: -1;
+}
 
 .hero-body_img {
   object-fit: cover;
   min-height: 500px;
   max-height: 600px;
-  border-radius: 2em;
+  border-radius: var(--hero-img-border-radius);
+  box-shadow: var(--nice-shadow);
 }
+
+
 
 
 @media only screen and (max-width: 800px) {
