@@ -212,7 +212,10 @@ main p {
 }
 
 
-
+.hero-reviews-content {
+  display: flex;
+  gap: 0.2em;
+}
 
 @media only screen and (max-width: 800px) {
   .hero-body {
