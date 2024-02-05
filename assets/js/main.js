@@ -16,7 +16,6 @@ fadeInRight.forEach((el) => observer.observe(el))
 
 
 const scrollToTop = document.querySelector('.scroll-top')
-console.log(scrollToTop)
 
 window.onscroll = function() {scrollfunciton()}
 
@@ -28,6 +27,4 @@ function scrollfunciton() {
         scrollToTop.style.display = "none";
     }
 }
-
-// Groups Dialog
 
