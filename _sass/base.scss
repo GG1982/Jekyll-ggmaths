@@ -414,45 +414,44 @@ main p {
 
 
 /* Reviews */
-.reviews-title {
-  display: grid;
-  place-items: center;
-  margin-bottom: 5rem;
-}
-.review-container {
-  /* display: grid; */
-
-  columns: 3 280px;
-  column-gap: 3rem;
+// .reviews-title {
+//   display: grid;
+//   place-items: center;
+//   margin-bottom: 5rem;
+// }
+// .review-container {
+//   /* display: grid; */
+//   columns: 3 280px;
+//   column-gap: 3rem;
   
-}
-@media only screen and (max-width: 320px) {
-  .review-container {
-      column-width: 100%;
-  }
-}
+// }
+// @media only screen and (max-width: 320px) {
+//   .review-container {
+//       column-width: 100%;
+//   }
+// }
 
-.review-card {
-  break-inside: avoid;
-  page-break-inside: avoid;
+// .review-card {
+//   break-inside: avoid;
+//   page-break-inside: avoid;
   
-  margin-top: 2rem;
-  background-color: var(--background-colour-2);
-  padding: 20% 1rem 2rem;
-  border: 1px solid rgb(42, 42, 42);
+//   margin-top: 2rem;
+//   background-color: var(--background-colour-2);
+//   padding: 20% 1rem 2rem;
+//   border: 1px solid rgb(42, 42, 42);
 
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
+//   display: flex;
+//   flex-direction: column;
+//   gap: 2rem;
 
-  position: relative;
-}
+//   position: relative;
+// }
 
 
-.review-card > p:last-child {
-  margin-top: auto;
-  text-transform: capitalize;
-}
+// .review-card > p:last-child {
+//   margin-top: auto;
+//   text-transform: capitalize;
+// }
 
 
 /* Form */

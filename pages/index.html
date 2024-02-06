@@ -9,7 +9,7 @@ permalink: /
             <div class="hero-body_content">
                 <div class="hero-body-title">
                     <h1 class="font-5 fancy-text">Struggling with GCSE or A-level maths?</h1>
-                    <h2 class="font-3">Don't worry! I have a proven process to unlock your full potential.</h2>
+                    <h2 class="font-3">Don't worry! My 1-1 tutoring will unlock your full potential.</h2>
                 </div>
                 
                 <div class="hero-body-btn">
@@ -23,23 +23,28 @@ permalink: /
 
                     {% include hero-form.html %}
 
-                    <div class="hero-reviews">
-                        <a class=" font-0" target="_blank" rel="noopener" href="https://www.google.com/search?q=ggmaths&rlz=1C5CHFA_enGB1048GB1048&oq=ggmaths+&aqs=chrome.0.69i59j0i546l2j69i60l2.1992j0j4&sourceid=chrome&ie=UTF-8#lrd=0x48761923e87f01e1:0xb59e62c483b997c,1,,,,">                     
-                            <div class="hero-reviews-content">
-                                <p>⭐️⭐️⭐️⭐️⭐️</p>
-                                <img src="/assets/images/google_g_icon_download.png" alt="" width="30px" height="30px">
-                                <p>based on 35 reviews</p>
-                            </div>
-                        </a>
-                    </div>
+                </ul>
+                
+                <div class="hero-reviews">
+                    <a class=" font-0" target="_blank" rel="noopener" href="https://www.google.com/search?q=ggmaths&rlz=1C5CHFA_enGB1048GB1048&oq=ggmaths+&aqs=chrome.0.69i59j0i546l2j69i60l2.1992j0j4&sourceid=chrome&ie=UTF-8#lrd=0x48761923e87f01e1:0xb59e62c483b997c,1,,,,">                     
+                        <div class="hero-reviews-content">
+                            <p>⭐️⭐️⭐️⭐️⭐️</p>
+                            <img src="/assets/images/google_g_icon_download.png" alt="" width="30px" height="30px">
+                            <p>based on 35 reviews</p>
+                        </div>
+                    </a>
                 </div>
             </div>
-
-            <div class="hero-img-container">
-                <img class="hero-body_img" src="/assets/images/giuliano_hiking.jpeg" alt="a picture of Giuliano hiking up a mountain, blue skies and a mountain full of tress in the background">
-            </div>
-        </section>
+        </div>
         
+        <div class="hero-img-container">
+            <img class="hero-body_img" src="/assets/images/giuliano_hiking.jpeg" alt="a picture of Giuliano hiking up a mountain, blue skies and a mountain full of tress in the background">
+        </div>
+    </section>
+
+    
+    {% include google_reviews.html %}
+    
         <section id="tutoring" class="cards-section">
             <div class="cards-container">
                 <!-- <div class="card fade-in" style="--order: 1;">
@@ -64,10 +69,7 @@ permalink: /
                 </div>
             </div>
 
-        </section>
-
-        <div class='sk-ww-google-reviews' data-embed-id='25358987'></div><script src='https://widgets.sociablekit.com/google-reviews/widget.js' async defer></script>
-      
+        </section>  
 
         <section id="about" class="about-section">
             <h2 class="fancy-text capitalize text-center font-2 mb-2">About me

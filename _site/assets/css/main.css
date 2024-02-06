@@ -292,41 +292,6 @@ main p {
 }
 
 /* Reviews */
-.reviews-title {
-  display: grid;
-  place-items: center;
-  margin-bottom: 5rem;
-}
-
-.review-container {
-  /* display: grid; */
-  columns: 3 280px;
-  column-gap: 3rem;
-}
-
-@media only screen and (max-width: 320px) {
-  .review-container {
-    column-width: 100%;
-  }
-}
-.review-card {
-  break-inside: avoid;
-  page-break-inside: avoid;
-  margin-top: 2rem;
-  background-color: var(--background-colour-2);
-  padding: 20% 1rem 2rem;
-  border: 1px solid rgb(42, 42, 42);
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  position: relative;
-}
-
-.review-card > p:last-child {
-  margin-top: auto;
-  text-transform: capitalize;
-}
-
 /* Form */
 .form-container {
   display: grid;
@@ -640,6 +605,43 @@ a:hover {
   max-width: 80ch;
 }
 
+.flex-row {
+  display: flex;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-justify-center {
+  justify-content: center;
+}
+
+.flex-align-center {
+  align-items: center;
+}
+
+.gap-25 {
+  gap: 0.25em;
+}
+
+.gap-50 {
+  gap: 0.5em;
+}
+
+.gap-75 {
+  gap: 0.75em;
+}
+
+.gap-1 {
+  gap: 1em;
+}
+
+.gap-2 {
+  gap: 2em;
+}
+
 /* Fade Animations */
 .fade-in {
   opacity: 0;
@@ -672,6 +674,23 @@ a:hover {
   filter: blur(0);
   transform: translateX(0);
   opacity: 1;
+}
+
+.reviews-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+  row-gap: 2em;
+  column-gap: 2em;
+  width: min(100%, 70em);
+  margin-inline: auto;
+}
+
+.review {
+  display: grid;
+  gap: 1em;
+  background-color: #fff;
+  padding: 1em;
+  border-radius: 1em;
 }
 
 /*# sourceMappingURL=main.css.map */

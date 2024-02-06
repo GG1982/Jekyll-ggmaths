@@ -1,0 +1,16 @@
+.reviews-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+    row-gap: 2em;
+    column-gap: 2em;
+    width: min(100%, 70em);
+    margin-inline: auto;
+}
+
+.review {
+    display: grid;
+    gap: 1em;
+    background-color: #fff;
+    padding: 1em;
+    border-radius: 1em;
+}

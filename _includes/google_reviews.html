@@ -1,0 +1,33 @@
+<section class="reviews-section">
+    {% assign profile_reviews = site.data.google_reviews.result %}
+    <div class="reviews-container">
+        <a href="https://www.google.com/maps/place/GG+Maths+-+GCSE+%26+A-Level+Private+Tutor/@51.6350783,-0.1409634,17z/data=!4m8!3m7!1s0x48761923e87f01e1:0xb59e62c483b997c!8m2!3d51.6350783!4d-0.1409634!9m1!1b1!16s%2Fg%2F11gmwmc5nt?entry=ttu" target="_blank" rel="noopener" class="review">
+            <p class="font-1 text-center">{{ profile_reviews.rating }}</p>
+            <p class="text-center">⭐️⭐️⭐️⭐️⭐️</p>
+            <p class="text-center fancy-text">Overall Rating</p>
+
+            <p class="text-center">{{ profile_reviews.name }}</p>
+            <p class="text-center">Based on {{ profile_reviews.user_ratings_total }} reviews</p>
+        </a>
+
+        {% for page in profile_reviews.reviews %}
+            {% if page.rating == 5 %}
+                <div class="review">
+                    <div class="review-profile flex-row gap-1">
+                        <img src="{{ page.profile_photo_url}}" width="40px" height="40px" alt="" srcset="">
+                        <p>{{ page.author_name }}</p>
+                    </div>
+                    <p>⭐️⭐️⭐️⭐️⭐️</p>
+                    <p class="font--1">{{ page.text | truncate: 180 }}</p>
+                    <!-- <a href="{{ page.author_url }}" target="_blank" rel="noopener">{{ page.author_url }}</a> -->
+                    <a href="{{ page.author_url }}" target="_blank" rel="noopener" class="body-link">
+                        <div class="flex-row flex-align-center gap-25">
+                            <img src="/assets/images/google_g_icon_download.png" width="20px" height="20px">
+                            <p class="capitalize font--1">read full review</p>
+                        </div>
+                    </a>
+                </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+</section>
