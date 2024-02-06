@@ -1,7 +1,7 @@
 <section class="reviews-section">
     {% assign profile_reviews = site.data.google_reviews.result %}
     <div class="reviews-container">
-        <a href="https://www.google.com/maps/place/GG+Maths+-+GCSE+%26+A-Level+Private+Tutor/@51.6350783,-0.1409634,17z/data=!4m8!3m7!1s0x48761923e87f01e1:0xb59e62c483b997c!8m2!3d51.6350783!4d-0.1409634!9m1!1b1!16s%2Fg%2F11gmwmc5nt?entry=ttu" target="_blank" rel="noopener" class="review">
+        <a href="{{ profile_reviews.url }}" target="_blank" rel="noopener" class="review">
             <p class="font-1 text-center">{{ profile_reviews.rating }}</p>
             <p class="text-center">⭐️⭐️⭐️⭐️⭐️</p>
             <p class="text-center fancy-text">Overall Rating</p>
