@@ -14,6 +14,7 @@ custom_css: secondary
         </p>
         <ul class="key-points">
             <h3>Key points:</h3>
+            <li class="font--1">Mark the checkbox when complete.</li>
             <li class="font--1">IGCSE Maths is the international version of GCSE Maths. Both are by Edexcel, and the questions are very similar.</li>
             <li class="font--1">I have arranged the questions in order of difficulty for you.</li>
             <li class="font--1">Grade 4-6 topics will still contain grade 7+ questions towards the end, so you should attempt them.</li>
@@ -24,26 +25,61 @@ custom_css: secondary
 
     <section class="">
         <h3 class="fancy-text font-4 ">Grades 4 - 6</h3>
+        {% assign i = 0 %}
 
-        {% for pdf in site.static_files %}
-            {% if pdf.path contains 'grade_4-6' %}
-                {% for paper in pdf.path %}
-                    <li><a target="_blank" rel="noopener" href="{{ site.url }}{{ pdf.path }}">{{ pdf.name | replace: '_', " " | remove: ".pdf"}}</a></li>
-                {% endfor %}
-            {% endif %}
-        {% endfor %}
+        <ul class="topics flex-column gap-25">
+            {% for pdf in site.static_files %}
+                {% if pdf.path contains 'grade_4-6' %}
+                    {% for paper in pdf.path %}
+                    {% assign i = i | plus:1 %}
+                        <li class="list-style-none">
+                            <input type="checkbox" id="{{ i }}">
+                            <a target="_blank" rel="noopener" href="{{ site.url }}{{ pdf.path }}">{{ pdf.name | replace: '_', " " | remove: ".pdf"}}</a>
+                        </li>
+                    {% endfor %}
+                {% endif %}
+            {% endfor %}
+        </ul>
     </section>
 
     <section class="">
         <h3 class="fancy-text font-4 ">Grades 7 - 9</h3>
-
-        {% for pdf in site.static_files %}
-            {% if pdf.path contains 'grade_7-9' %}
-                {% for paper in pdf.path %}
-                    <li><a target="_blank" rel="noopener" href="{{ site.url }}{{ pdf.path }}">{{ pdf.name | replace: '_', " " | remove: ".pdf"}}</a></li>
-                {% endfor %}
-            {% endif %}
-        {% endfor %}
+        
+        <ul class="topics flex-column gap-25">
+            {% for pdf in site.static_files %}
+                {% if pdf.path contains 'grade_7-9' %}
+                    {% for paper in pdf.path %}
+                    {% assign i = i | plus:1 %}
+                    <li class="list-style-none">
+                        <input type="checkbox" id="{{ i }}">
+                        <a target="_blank" rel="noopener" href="{{ site.url }}{{ pdf.path }}">{{ pdf.name | replace: '_', " " | remove: ".pdf"}}</a>
+                    </li>
+                    {% endfor %}
+                {% endif %}
+            {% endfor %}
+        </ul>
     </section>
 
 </main>
+
+<script>
+
+    let boxes = document.querySelectorAll('input').length;
+
+    function save() {	
+    for(let i = 1; i <= boxes; i++){
+        var checkbox = document.getElementById(String(i));
+        localStorage.setItem("checkbox" + String(i), checkbox.checked);	
+    }
+    }
+
+    //for loading
+    for(let i = 1; i <= boxes; i++){
+    if(localStorage.length > 0){
+        var checked = JSON.parse(localStorage.getItem("checkbox" + String(i)));
+        document.getElementById(String(i)).checked = checked;
+    }
+    }
+    window.addEventListener('change', save);
+
+</script>

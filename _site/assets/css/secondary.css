@@ -126,4 +126,8 @@
   opacity: var(--opacity-hover);
 }
 
+.topics li > input {
+  margin-inline: 0 10px;
+}
+
 /*# sourceMappingURL=secondary.css.map */

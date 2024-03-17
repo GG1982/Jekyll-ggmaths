@@ -522,6 +522,10 @@ a:hover {
   opacity: var(--opacity-hover);
 }
 
+.list-style-none {
+  list-style: none;
+}
+
 .body-link {
   text-transform: lowercase;
   color: var(--clr-accent);
