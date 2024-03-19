@@ -26,7 +26,6 @@ body {
   background-color: var(--background-colour);
   color: var(--font-clr);
   font-family: var(--body-font);
-  overflow-x: hidden;
   display: grid;
   grid-template-rows: auto 1fr auto;
   background-image: radial-gradient(rgba(19, 152, 90, 0.3) 1px, transparent 0);
@@ -36,7 +35,6 @@ body {
 
 body > * {
   margin-inline: auto;
-  overflow-x: hidden;
   width: min(100% - 2rem, 90em, 90vw);
 }
 

@@ -1,15 +1,30 @@
 let checkboxes = document.querySelectorAll('input[type="checkbox"]');
 let boxes = checkboxes.length;
 
-function save() {	
-    for(let i = 0; i < boxes; i++){
+// Local Storage
+function save() {
+    let checkedCount = countCheckedCheckboxes();
+    localStorage.setItem("checkedCount", checkedCount);
+    for (let i = 0; i < boxes; i++) {
         var checkbox = checkboxes[i];
-        localStorage.setItem("checkbox" + i, checkbox.checked);	
+        localStorage.setItem("checkbox" + i, checkbox.checked);
     }
 }
 
-//for loading
-for(let i = 0; i < boxes; i++){
+// Function to count checked checkboxes
+function countCheckedCheckboxes() {
+    let checkedCount = 0;
+    checkboxes.forEach(function(checkbox) {
+        if (checkbox.checked) {
+            checkedCount++;
+        }
+    });
+    return checkedCount;
+}
+
+
+// Load checkbox state from local storage
+for (let i = 0; i < boxes; i++) {
     var checked = JSON.parse(localStorage.getItem("checkbox" + i));
     checkboxes[i].checked = checked;
 }
@@ -18,3 +33,43 @@ for(let i = 0; i < boxes; i++){
 checkboxes.forEach(function(checkbox) {
     checkbox.addEventListener('change', save);
 });
+
+
+
+
+
+
+// Progress Bar
+const progressbar = document.querySelector(".progressbar")
+
+function enableProgressbar() {
+    progressbar.setAttribute("role", "progressbar");
+
+    let checkedCount = localStorage.getItem("checkedCount");
+    progressPercentage = Math.round((checkedCount / checkboxes.length) * 1000 ) / 10;
+    progressbar.setAttribute("aria-valuenow", progressPercentage);
+    progressbar.style.setProperty('--progress', progressPercentage + "%")
+
+}
+enableProgressbar()
+
+// Function to update the progress bar value and convert to a %
+function updateProgressBarValue() {
+    let checkedCount = localStorage.getItem("checkedCount");
+    let progressPercentage = (checkedCount / checkboxes.length) * 100;
+    return Math.round(progressPercentage * 10) / 10 // round to 1dp
+}
+
+// Attach event listener to each checkbox
+checkboxes.forEach(function(checkbox) {
+    checkbox.addEventListener('change', function() {
+        let newValue = updateProgressBarValue(); // Update the progress bar value with the new value
+        progressbar.setAttribute("aria-valuenow", newValue);
+        progressbar.style.setProperty('--progress', newValue + "%")
+    });
+});
+
+
+
+
+

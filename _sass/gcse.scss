@@ -151,3 +151,63 @@
 .topics li > input {
     margin-inline: 0 10px;
 }
+
+
+.grid-container {
+    display: grid;
+    row-gap: 3em;
+}
+
+.progressbar-container {
+    display: grid;
+    place-items: center;
+    row-gap: .5em;
+}
+
+[role="progressbar"] {
+    --clr-dark: #1f1a38;
+    --clr-dark-glare: #989ea9;
+    --size: 202px;
+    --bar-width: 30px;
+
+    margin: 0 auto;
+
+    font-size: var(--step-4);
+
+    width: var(--size);
+    aspect-ratio: 1 / 1;
+
+    background-image: conic-gradient(
+        var(--clr-dark) var(--progress, 0),
+        var(--clr-dark-glare) 0%
+    );
+    border-radius: 50%;
+
+    display: grid;
+    place-items: center;
+    
+}
+
+[role="progressbar"]::after {
+    content: attr(aria-valuenow) "%";
+    background-color: white;
+    border-radius: inherit;
+    width: calc(100% - var(--bar-width));
+    aspect-ratio:  1 / 1;
+
+    display: grid;
+    place-items: center;
+
+}
+
+
+[role="progressbar"] span {
+    display: none
+}
+
+
+// if js is disabled
+.progressbar:not([role="progressbar"]) {
+    color: red;
+}
+
