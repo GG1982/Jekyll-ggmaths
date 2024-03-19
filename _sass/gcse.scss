@@ -153,7 +153,7 @@
 }
 
 
-.grid-container {
+.topics-grid-container {
     display: grid;
     row-gap: 3em;
 }
@@ -199,15 +199,11 @@
     place-items: center;
 
 }
-
-
 [role="progressbar"] span {
     display: none
 }
-
 
 // if js is disabled
 .progressbar:not([role="progressbar"]) {
     color: red;
 }
-

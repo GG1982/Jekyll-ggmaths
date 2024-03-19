@@ -130,7 +130,7 @@
   margin-inline: 0 10px;
 }
 
-.grid-container {
+.topics-grid-container {
   display: grid;
   row-gap: 3em;
 }
