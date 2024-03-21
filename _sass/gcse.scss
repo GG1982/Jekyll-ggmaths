@@ -167,6 +167,7 @@
 [role="progressbar"] {
     --clr-dark: #1f1a38;
     --clr-dark-glare: #989ea9;
+    --clr-success: #76f7bf;
     --size: 202px;
     --bar-width: 30px;
 
@@ -175,6 +176,7 @@
     font-size: var(--step-4);
 
     width: var(--size);
+    height: var(--size);
     aspect-ratio: 1 / 1;
 
     background-image: conic-gradient(
@@ -193,6 +195,7 @@
     background-color: white;
     border-radius: inherit;
     width: calc(100% - var(--bar-width));
+    height: calc(100% - var(--bar-width));
     aspect-ratio:  1 / 1;
 
     display: grid;
@@ -206,4 +209,33 @@
 // if js is disabled
 .progressbar:not([role="progressbar"]) {
     color: red;
+}
+
+// animation at 100% completeion
+[role="progressbar"][aria-valuenow="100"] {
+    --clr-4: #2d8f85;
+    background-image: conic-gradient(
+        from var(--gradient-angle),
+        var(--clr-accent),
+        var(--clr-accent-2),
+        var(--clr-4),
+        var(--clr-accent-2),
+        var(--clr-accent),
+    );
+    animation: rotation 3s linear infinite;
+}
+
+[role="progressbar"][aria-valuenow="100"]::after {
+    content: attr(aria-valuenow) "%";
+}
+
+
+@property --gradient-angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+@keyframes rotation {
+    0% { --gradient-angle: 0deg }
+    100% { --gradient-angle: 360deg }
 }
