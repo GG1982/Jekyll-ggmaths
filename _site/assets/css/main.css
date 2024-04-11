@@ -143,6 +143,7 @@ header {
   grid-template-columns: 2fr 1fr;
   position: relative;
   isolation: isolate;
+  padding-bottom: 4rem;
 }
 
 .hero-body::after {
@@ -179,7 +180,6 @@ header {
 }
 
 .hero-reviews-content {
-  margin-top: 10%;
   display: flex;
   flex-wrap: wrap;
   gap: 0.2rem;
