@@ -185,7 +185,15 @@ header {
   gap: 0.2rem;
 }
 
+@media only screen and (min-width: 660px) {
+  .mobile-only {
+    display: none;
+  }
+}
 @media only screen and (max-width: 660px) {
+  .desktop-only {
+    display: none;
+  }
   .hero {
     min-height: 50vh;
     min-height: 50svh;
