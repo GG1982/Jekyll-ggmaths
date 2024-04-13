@@ -140,7 +140,6 @@ header {
 
 .hero-body {
   display: grid;
-  grid-template-columns: 2fr 1fr;
   position: relative;
   isolation: isolate;
   padding-bottom: 4rem;
@@ -155,28 +154,25 @@ header {
   background-size: contain;
   background-position: bottom;
   z-index: -1;
-  opacity: 0.9;
-}
-
-.hero-body > div:nth-child(1) {
-  margin-top: 20%;
 }
 
 .hero-body-title h1,
 .hero-body-title h2 {
-  max-width: 35ch;
+  max-width: 40ch;
   font-weight: 500;
 }
 
 .hero-body-title {
+  margin-top: 5%;
   display: flex;
   flex-direction: column;
-  gap: 4rem;
+  gap: 2rem;
 }
 
-.hero-reviews {
-  grid-column: 2;
-  grid-row: 2;
+.hero-body-title > div:nth-child(1) {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 .hero-reviews-content {
@@ -185,34 +181,13 @@ header {
   gap: 0.2rem;
 }
 
-@media only screen and (min-width: 660px) {
-  .mobile-only {
-    display: none;
-  }
-}
 @media only screen and (max-width: 660px) {
-  .desktop-only {
-    display: none;
-  }
   .hero {
     min-height: 50vh;
     min-height: 50svh;
   }
-  .hero-body {
-    display: flex;
-    flex-direction: column;
-  }
   .hero-body::after {
     background: none;
-  }
-  .hero-reviews {
-    grid-column: 1;
-  }
-  .hero-body > div:nth-child(1) {
-    margin-top: 0%;
-  }
-  .hero-reviews-content {
-    margin-top: 20%;
   }
 }
 /* Cards */
@@ -690,6 +665,28 @@ a:hover {
 
 .gap-2 {
   gap: 2em;
+}
+
+.bn9 {
+  padding: 2px;
+  outline: 0;
+  font-size: 17px;
+  color: rgb(0, 0, 0);
+  background: -webkit-gradient(linear, left top, right top, from(#fdde5c), color-stop(#f8ab5e), color-stop(#f56a62), color-stop(#a176c8), color-stop(#759beb), color-stop(#65beb3), to(#70db96));
+  background: linear-gradient(to right, #fdde5c, #f8ab5e, #f56a62, #a176c8, #759beb, #65beb3, #70db96);
+  border-radius: 30px;
+  border: 0;
+  box-shadow: none;
+  cursor: pointer;
+}
+
+.bn9 > span {
+  display: block;
+  padding: 10px 40px;
+  font-size: 17px;
+  font-weight: 500;
+  background: #ebebeb;
+  border-radius: 30px;
 }
 
 /* Fade Animations */
