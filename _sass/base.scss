@@ -172,7 +172,7 @@ header {
   content: "";
   position: absolute;
   inset: 0;
-  background-image: url(/assets/images/hero-timeline.svg);
+  background-image: url(/assets/images/hero-timeline-2.svg);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: bottom;
@@ -181,12 +181,14 @@ header {
 }
 
 
-.hero-body-title h1,
-.hero-body-title h2 {
+.hero-body-title h1 {
   max-width: 40ch;
   font-weight: 500;
 }
-
+.hero-body-title h2 {
+  max-width: 40ch;
+  font-weight: 300;
+}
 .hero-body-title {
   margin-top: 5%;
   display: flex;
