@@ -1,6 +1,5 @@
 @charset "UTF-8";
 .about-group {
-  margin-top: -6em;
   display: grid;
   width: min(100%, 70em);
   margin-inline: auto;
