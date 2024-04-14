@@ -54,7 +54,7 @@ body > * {
 }
 
 main {
-  --section-gap: 8rem;
+  --section-gap: 5rem;
   display: grid;
   grid-template-columns: 1fr;
   gap: var(--section-gap);
@@ -154,9 +154,8 @@ header {
 /* Hero */
 .hero {
   display: grid;
-  min-height: 80vh;
-  min-height: 80svh;
-  max-height: 1000px;
+  min-height: 65vh;
+  min-height: 70svh;
 }
 
 
@@ -176,9 +175,9 @@ header {
   background-image: url(/assets/images/hero-timeline-2.svg);
   background-repeat: no-repeat;
   background-size: contain;
-  background-position: bottom;
+  background-position: center;
   z-index: -1;
-  // opacity: 0.9;
+
 }
 
 
