@@ -1595,10 +1595,8 @@
     topics.forEach(element => {
         title = element.text;
         if (title.match(gcse)) {
-            console.log(title);
             element.style.color = "red";
         } else if (title.match(igcse)) {
-            console.log(title);
             element.style.color = "blue";
         }
     });
