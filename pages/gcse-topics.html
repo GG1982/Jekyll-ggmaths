@@ -63,6 +63,22 @@ custom_css: secondary
                 {% endfor %}
             </ul>
         </div>
+
+        <div class="grade-9-container">
+            <h3 class="fancy-text font-4 ">Grades 9 Exams</h3>
+            <ul class="topics flex-column gap-25">
+                {% for pdf in site.static_files %}
+                    {% if pdf.path contains 'grade_9_exams' %}
+                        {% for paper in pdf.path %}
+                        <li class="list-style-none">
+                            <!-- <input type="checkbox" id="{{ i }}"> -->
+                            <a id="topic" target="_blank" rel="noopener" href="{{ site.url }}{{ pdf.path }}">{{ pdf.name | replace: '_', " " | remove: ".pdf" | remove: "Grade 9"}}</a>
+                        </li>
+                        {% endfor %}
+                    {% endif %}
+                {% endfor %}
+            </ul>
+        </div>
     </section>
 
 
