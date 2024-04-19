@@ -70,7 +70,7 @@ custom_css: secondary
                 {% for pdf in site.static_files %}
                     {% if pdf.path contains 'grade_9_exams' %}
                         {% for paper in pdf.path %}
-                        <li class="list-style-none">
+                        <li style="margin-left: 1rem;">
                             <!-- <input type="checkbox" id="{{ i }}"> -->
                             <a id="topic" target="_blank" rel="noopener" href="{{ site.url }}{{ pdf.path }}">{{ pdf.name | replace: '_', " " | remove: ".pdf" | remove: "Grade 9"}}</a>
                         </li>
