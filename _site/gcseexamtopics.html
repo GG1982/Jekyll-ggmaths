@@ -2124,7 +2124,7 @@
 <script defer src="http://localhost:4000/assets/js/topics.js"></script>
 
 <script>
-    topics = document.querySelectorAll("#topic");
+    const topics = document.querySelectorAll('a[id^="topic_"]');
 
     var gcse = /\bGCSE\b/;
     var igcse = /\bIGCSE\b/;

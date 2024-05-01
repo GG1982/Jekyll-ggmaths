@@ -84,7 +84,7 @@ custom_css: secondary
 <script defer src="{{ site.url }}/assets/js/topics.js"></script>
 
 <script>
-    topics = document.querySelectorAll("#topic");
+    const topics = document.querySelectorAll('a[id^="topic_"]');
 
     var gcse = /\bGCSE\b/;
     var igcse = /\bIGCSE\b/;
