@@ -38,8 +38,6 @@ checkboxes.forEach(function(checkbox) {
 
 
 
-
-
 // Progress Bar
 const progressbar = document.querySelector(".progressbar")
 
