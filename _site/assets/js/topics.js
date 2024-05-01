@@ -3,12 +3,13 @@ let boxes = checkboxes.length;
 
 // Local Storage
 function save() {
-    let checkedCount = countCheckedCheckboxes();
-    localStorage.setItem("checkedCount", checkedCount);
-    for (let i = 0; i < boxes; i++) {
-        var checkbox = checkboxes[i];
-        localStorage.setItem("checkbox" + i, checkbox.checked);
-    }
+    checkboxes.forEach(function(checkbox) {
+        let topicId = checkbox.getAttribute("data-topic-id");
+        localStorage.setItem("checkbox_" + topicId, checkbox.checked);
+
+        let checkedCount = countCheckedCheckboxes();
+        localStorage.setItem("checkedCount", checkedCount);
+    });
 }
 
 // Function to count checked checkboxes
@@ -22,10 +23,10 @@ function countCheckedCheckboxes() {
     return checkedCount;
 }
 
-
-// Load checkbox state from local storage
+// Local Storage: Load checkbox states from local storage
 for (let i = 0; i < boxes; i++) {
-    var checked = JSON.parse(localStorage.getItem("checkbox" + i));
+    let topicId = checkboxes[i].getAttribute("data-topic-id");
+    let checked = localStorage.getItem("checkbox_" + topicId) === "true";
     checkboxes[i].checked = checked;
 }
 
