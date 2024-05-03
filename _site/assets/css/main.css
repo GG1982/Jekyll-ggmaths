@@ -35,7 +35,7 @@ body {
 
 body > * {
   margin-inline: auto;
-  width: min(100% - 2rem, 70em);
+  width: min(100% - 3rem, 70em);
 }
 
 main {
