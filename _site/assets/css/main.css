@@ -110,6 +110,10 @@ header {
   header .btn {
     display: none;
   }
+  .nav-header > ul {
+    gap: 1em;
+    flex-wrap: wrap;
+  }
 }
 .btn {
   border: 2px solid var(--font-clr);
@@ -134,8 +138,8 @@ header {
 /* Hero */
 .hero {
   display: grid;
-  min-height: 65vh;
-  min-height: 70svh;
+  min-height: 75vh;
+  min-height: 75svh;
 }
 
 .hero-body {
@@ -280,42 +284,31 @@ header {
   }
 }
 /* Pricing */
-.pricing-cards-container {
+.pricing {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-areas: "online face" "btn btn";
-  column-gap: 2em;
-  row-gap: 3em;
-  width: min(100%, 50em);
-  margin-inline: auto;
 }
 
-.pricing-cards-container > div:nth-child(1) {
-  grid-area: online;
-}
-
-.pricing-cards-container > div:nth-child(1) {
-  grid-area: face;
-}
-
-.pricing-cards-container > div:nth-child(3) {
-  grid-area: btn;
-  justify-self: center;
-}
-
-@media (width < 600px) {
-  .pricing-cards-container {
-    grid-template-areas: "online" "face" "btn";
-    grid-template-columns: 1fr;
-  }
-}
 .pricing-card {
   background-color: var(--background-colour-2);
-  padding: 20% 1rem 1rem;
+  padding: 2rem 1rem 1rem;
   border: 1px solid rgb(42, 42, 42);
+  box-shadow: var(--nice-shadow);
+  border-radius: var(--card-border-radius);
+  width: min(100%, 600px);
+  margin-inline: auto;
   display: flex;
   flex-direction: column;
   gap: 1rem;
+}
+
+.pricing-card-benefits {
+  display: grid;
+  gap: 30px;
+  text-wrap: pretty;
+}
+
+.pricing-card-benefits p {
+  text-wrap: pretty;
 }
 
 /* Reviews */
