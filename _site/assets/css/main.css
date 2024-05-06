@@ -157,13 +157,15 @@ header {
 }
 
 .hero-body-title h1 {
-  max-width: 40ch;
+  max-width: 35ch;
+  text-wrap: balance;
   font-weight: 500;
 }
 
 .hero-body-title h2 {
   max-width: 40ch;
   font-weight: 300;
+  text-wrap: balance;
 }
 
 .hero-body-title {
