@@ -213,20 +213,28 @@
 
 // animation at 100% completeion
 [role="progressbar"][aria-valuenow="100"] {
-    --clr-4: #2d8f85;
+    // --clr-4: #2d8f85;
+    // background-image: conic-gradient(
+    //     from var(--gradient-angle),
+    //     var(--clr-accent),
+    //     var(--clr-accent-2),
+    //     var(--clr-4),
+    //     var(--clr-accent-2),
+    //     var(--clr-accent),
+    // );
+
     background-image: conic-gradient(
-        from var(--gradient-angle),
-        var(--clr-accent),
-        var(--clr-accent-2),
-        var(--clr-4),
-        var(--clr-accent-2),
-        var(--clr-accent),
+    from var(--gradient-angle),
+    #fdde5c,
+    #f8ab5e,
+    #f56a62,
+    #a176c8,
+    #759beb,
+    #65beb3,
+    #70db96,
+    #fdde5c
     );
     animation: rotation 3s linear infinite;
-}
-
-[role="progressbar"][aria-valuenow="100"]::after {
-    content: attr(aria-valuenow) "%";
 }
 
 
