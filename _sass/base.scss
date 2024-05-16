@@ -324,6 +324,22 @@ header {
   border-radius: 10px;
 }
 
+// Coach
+
+.coach-container {
+  display: grid;
+  place-content: center;
+  max-width: var(--body-content-width);
+  gap: 2em;
+}
+
+
+.coach-body {
+  display: grid;
+  place-content: center;
+  gap: 2rem;
+  max-width: 65ch;
+}
 
 /* Youtube */
 .youtube-container {
