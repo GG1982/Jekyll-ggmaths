@@ -296,6 +296,14 @@
                 
                 
                 <li class="list-style-none">
+                    <input type="checkbox" id="checkbox_Linear_Simultaneous_Equations" data-topic-id="Linear_Simultaneous_Equations">
+                    <a id="topic_Linear_Simultaneous_Equations" target="_blank" rel="noopener" href="http://localhost:4000/assets/grade_4-6/Linear_Simultaneous_Equations.pdf">Linear Simultaneous Equations</a>
+                </li>
+                
+                
+                
+                
+                <li class="list-style-none">
                     <input type="checkbox" id="checkbox_Money_Problems" data-topic-id="Money_Problems">
                     <a id="topic_Money_Problems" target="_blank" rel="noopener" href="http://localhost:4000/assets/grade_4-6/Money_Problems.pdf">Money Problems</a>
                 </li>
@@ -344,8 +352,8 @@
                 
                 
                 <li class="list-style-none">
-                    <input type="checkbox" id="checkbox_Ratio" data-topic-id="Ratio">
-                    <a id="topic_Ratio" target="_blank" rel="noopener" href="http://localhost:4000/assets/grade_4-6/Ratio.pdf">Ratio</a>
+                    <input type="checkbox" id="checkbox_Ratio_Grade_5+" data-topic-id="Ratio_Grade_5+">
+                    <a id="topic_Ratio_Grade_5+" target="_blank" rel="noopener" href="http://localhost:4000/assets/grade_4-6/Ratio_Grade_5+.pdf">Ratio Grade 5+</a>
                 </li>
                 
                 
@@ -394,14 +402,6 @@
                 <li class="list-style-none">
                     <input type="checkbox" id="checkbox_Similar_Shapes" data-topic-id="Similar_Shapes">
                     <a id="topic_Similar_Shapes" target="_blank" rel="noopener" href="http://localhost:4000/assets/grade_4-6/Similar_Shapes.pdf">Similar Shapes</a>
-                </li>
-                
-                
-                
-                
-                <li class="list-style-none">
-                    <input type="checkbox" id="checkbox_Simultaneous_Equations" data-topic-id="Simultaneous_Equations">
-                    <a id="topic_Simultaneous_Equations" target="_blank" rel="noopener" href="http://localhost:4000/assets/grade_4-6/Simultaneous_Equations.pdf">Simultaneous Equations</a>
                 </li>
                 
                 
@@ -2127,16 +2127,63 @@
 <script>
     const topics = document.querySelectorAll('a[id^="topic_"]');
 
-    var gcse = /\bGCSE\b/;
-    var igcse = /\bIGCSE\b/;
-    topics.forEach(element => {
-        title = element.text;
-        if (title.match(gcse)) {
-            element.style.color = "red";
-        } else if (title.match(igcse)) {
-            element.style.color = "blue";
-        }
-    });
+    var gcse = /\bgcse\b/gi;
+    var igcse = /\bIGCSE\b/gi;
+
+    var sequences = /\bsequences\b/gi;
+    var fractions = /\bfractions\b/gi;
+    var area = /\barea grade 4\b/gi;
+    var avergaes = /\bavergaes\b/gi;
+    var ratio = /\bratio\b/gi;
+    var simultaneous = /\simultaneous\b/gi;
+    var transformations = /\btransformations\b/gi;
+    var histograms = /\bhistograms\b/gi;
+    var arcs = /\barcs\b/gi;
+    var surds = /\bsurds\b/gi;
+    var volume = /\bvolume\b/gi;
+
+    // topics.forEach(element => {
+    //     title = element.text;
+    //     if (title.match(gcse)) {
+    //         element.style.color = "red";
+    //     } else if (title.match(igcse)) {
+    //         element.style.color = "blue";
+    //     }
+    // });
+
+
+
+    const patterns = [
+            /\bSequences Grade 5+\b/gi,
+            /\bIndices\b/gi,
+            /\bfractions\b/gi,
+            /\Area & Perimeter Grade 4\b/gi,
+            /\baverages\b/gi,
+            /\bratio Grade 5+\b/gi,
+            /\bLinear Simultaneous Equations\b/gi,
+            /\btransformations\b/gi,
+            /\bhistograms\b/gi,
+            /\barcs\b/gi,
+            /\bsurds\b/gi,
+            /\bvolume\b/gi,
+            /\bvenn\b/gi,
+            /\brecurring\b/gi,
+            /\bEquation Of Line 1\b/gi,
+            /\bEquation Of Line 2\b/gi,
+            /\bGraphs Plotting\b/gi,
+            /\bpercentages\b/gi
+        ];
+
+        topics.forEach(element => {
+            const title = element.text;
+
+            // Loop through each pattern
+            patterns.forEach(pattern => {
+                if (pattern.test(title)) {
+                    element.style.color = "red";
+                }
+            });
+        });
 </script>
     <footer>
     <p>© 2024 All rights reserved.</p>

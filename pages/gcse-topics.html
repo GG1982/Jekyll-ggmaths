@@ -85,14 +85,61 @@ custom_css: secondary
 <script>
     const topics = document.querySelectorAll('a[id^="topic_"]');
 
-    var gcse = /\bGCSE\b/;
-    var igcse = /\bIGCSE\b/;
-    topics.forEach(element => {
-        title = element.text;
-        if (title.match(gcse)) {
-            element.style.color = "red";
-        } else if (title.match(igcse)) {
-            element.style.color = "blue";
-        }
-    });
+    var gcse = /\bgcse\b/gi;
+    var igcse = /\bIGCSE\b/gi;
+
+    var sequences = /\bsequences\b/gi;
+    var fractions = /\bfractions\b/gi;
+    var area = /\barea grade 4\b/gi;
+    var avergaes = /\bavergaes\b/gi;
+    var ratio = /\bratio\b/gi;
+    var simultaneous = /\simultaneous\b/gi;
+    var transformations = /\btransformations\b/gi;
+    var histograms = /\bhistograms\b/gi;
+    var arcs = /\barcs\b/gi;
+    var surds = /\bsurds\b/gi;
+    var volume = /\bvolume\b/gi;
+
+    // topics.forEach(element => {
+    //     title = element.text;
+    //     if (title.match(gcse)) {
+    //         element.style.color = "red";
+    //     } else if (title.match(igcse)) {
+    //         element.style.color = "blue";
+    //     }
+    // });
+
+
+
+    const patterns = [
+            /\bSequences Grade 5+\b/gi,
+            /\bIndices\b/gi,
+            /\bfractions\b/gi,
+            /\Area & Perimeter Grade 4\b/gi,
+            /\baverages\b/gi,
+            /\bratio Grade 5+\b/gi,
+            /\bLinear Simultaneous Equations\b/gi,
+            /\btransformations\b/gi,
+            /\bhistograms\b/gi,
+            /\barcs\b/gi,
+            /\bsurds\b/gi,
+            /\bvolume\b/gi,
+            /\bvenn\b/gi,
+            /\brecurring\b/gi,
+            /\bEquation Of Line 1\b/gi,
+            /\bEquation Of Line 2\b/gi,
+            /\bGraphs Plotting\b/gi,
+            /\bpercentages\b/gi
+        ];
+
+        topics.forEach(element => {
+            const title = element.text;
+
+            // Loop through each pattern
+            patterns.forEach(pattern => {
+                if (pattern.test(title)) {
+                    element.style.color = "red";
+                }
+            });
+        });
 </script>
