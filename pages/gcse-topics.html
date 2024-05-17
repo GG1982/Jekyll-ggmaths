@@ -139,6 +139,7 @@ custom_css: secondary
             patterns.forEach(pattern => {
                 if (pattern.test(title)) {
                     element.style.color = "red";
+                    element.style.textDecoration = "line-through";
                 }
             });
         });
