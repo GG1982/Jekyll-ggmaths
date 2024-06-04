@@ -1099,8 +1099,8 @@
                 
                 
                 <li class="list-style-none">
-                    <input type="checkbox" id="checkbox_Probability_Grade_7" data-topic-id="Probability_Grade_7">
-                    <a id="topic_Probability_Grade_7" target="_blank" rel="noopener" href="http://localhost:4000/assets/grade_7-9/Probability_Grade_7.pdf">Probability Grade 7</a>
+                    <input type="checkbox" id="checkbox_Probability_Grade_8+" data-topic-id="Probability_Grade_8+">
+                    <a id="topic_Probability_Grade_8+" target="_blank" rel="noopener" href="http://localhost:4000/assets/grade_7-9/Probability_Grade_8+.pdf">Probability Grade 8+</a>
                 </li>
                 
                 
@@ -2127,21 +2127,6 @@
 <script>
     const topics = document.querySelectorAll('a[id^="topic_"]');
 
-    var gcse = /\bgcse\b/gi;
-    var igcse = /\bIGCSE\b/gi;
-
-    var sequences = /\bsequences\b/gi;
-    var fractions = /\bfractions\b/gi;
-    var area = /\barea grade 4\b/gi;
-    var avergaes = /\bavergaes\b/gi;
-    var ratio = /\bratio\b/gi;
-    var simultaneous = /\simultaneous\b/gi;
-    var transformations = /\btransformations\b/gi;
-    var histograms = /\bhistograms\b/gi;
-    var arcs = /\barcs\b/gi;
-    var surds = /\bsurds\b/gi;
-    var volume = /\bvolume\b/gi;
-
     // topics.forEach(element => {
     //     title = element.text;
     //     if (title.match(gcse)) {
@@ -2157,7 +2142,7 @@
             /\bSequences Grade 5+\b/gi,
             /\bIndices\b/gi,
             /\bfractions\b/gi,
-            /\Area & Perimeter Grade 4\b/gi,
+            /\bArea & Perimeter Grade 4\b/gi,
             /\baverages\b/gi,
             /\bratio Grade 5+\b/gi,
             /\bLinear Simultaneous Equations\b/gi,
@@ -2171,7 +2156,22 @@
             /\bEquation Of Line 1\b/gi,
             /\bEquation Of Line 2\b/gi,
             /\bGraphs Plotting\b/gi,
-            /\bpercentages\b/gi
+            /\bpercentages\b/gi,
+
+            /\bSOH CAH TOA & Pythagoros 1\b/gi,
+            /\bSOH CAH TOA & Pythagoros 2\b/gi,
+            /\bHCF\b/gi,
+            /\bProbabality Grade 4\b/gi,
+            /\bProbabality Grade 5\b/gi,
+            /\bDirect & Inverse Proportion\b/gi,
+            /\bInequalities On Graphs\b/gi,
+            /\bTangents & Area Graphs\b/gi,
+            /\bSimilar Shapes\b/gi,
+            /\bvectors\b/gi,
+            /\bInequalities Grade 8\b/gi,
+            /\bCircle Theorems 1\b/gi,
+
+
         ];
 
         topics.forEach(element => {
