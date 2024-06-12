@@ -85,14 +85,14 @@ custom_css: secondary
 <script>
     const topics = document.querySelectorAll('a[id^="topic_"]');
 
-    // topics.forEach(element => {
-    //     title = element.text;
-    //     if (title.match(gcse)) {
-    //         element.style.color = "red";
-    //     } else if (title.match(igcse)) {
-    //         element.style.color = "blue";
-    //     }
-    // });
+    topics.forEach(element => {
+        title = element.text;
+        if (title.match(gcse)) {
+            element.style.color = "red";
+        } else if (title.match(igcse)) {
+            element.style.color = "blue";
+        }
+    });
 
 
 
@@ -133,15 +133,15 @@ custom_css: secondary
 
         ];
 
-        topics.forEach(element => {
-            const title = element.text;
+        // topics.forEach(element => {
+        //     const title = element.text;
 
-            // Loop through each pattern
-            patterns.forEach(pattern => {
-                if (pattern.test(title)) {
-                    element.style.color = "red";
-                    element.style.textDecoration = "line-through";
-                }
-            });
-        });
+        //     // Loop through each pattern
+        //     patterns.forEach(pattern => {
+        //         if (pattern.test(title)) {
+        //             element.style.color = "red";
+        //             element.style.textDecoration = "line-through";
+        //         }
+        //     });
+        // });
 </script>
