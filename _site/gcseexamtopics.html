@@ -2163,6 +2163,8 @@
 <script>
     const topics = document.querySelectorAll('a[id^="topic_"]');
 
+    const gcse = /\bgcse\b/gi
+    const igcse = /\bigcse\b/gi
     topics.forEach(element => {
         title = element.text;
         if (title.match(gcse)) {
