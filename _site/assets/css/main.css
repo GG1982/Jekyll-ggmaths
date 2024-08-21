@@ -28,9 +28,6 @@ body {
   font-family: var(--body-font);
   display: grid;
   grid-template-rows: auto 1fr auto;
-  background-image: radial-gradient(rgba(19, 152, 90, 0.3) 1px, transparent 0);
-  background-size: 35px 35px;
-  background-attachment: fixed;
 }
 
 body > * {
