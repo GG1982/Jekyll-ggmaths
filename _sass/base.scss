@@ -226,7 +226,7 @@ header {
 
 .faq {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(500px, 100%), 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(370px, 100%), 1fr));
 
   column-gap: 2em;
   row-gap: 1em;
