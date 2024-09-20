@@ -158,6 +158,23 @@
     row-gap: 3em;
 }
 
+@media (min-width: 700px) {
+    .two-col-container {
+        display: grid;  
+        justify-items: center;
+        grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+    }
+}
+
+@media (max-width: 650px) {
+    .two-col-container {
+        display: grid;  
+        justify-items: left;
+        grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+    }
+}
+
+
 .progressbar-container {
     display: grid;
     place-items: center;
