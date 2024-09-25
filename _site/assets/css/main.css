@@ -725,7 +725,7 @@ a:hover {
 }
 
 .bn9 {
-  padding: 2px;
+  padding: 3px;
   outline: 0;
   font-size: 17px;
   color: rgb(0, 0, 0);
@@ -739,10 +739,10 @@ a:hover {
 
 .bn9 > span {
   display: block;
-  padding: 10px 40px;
+  padding: 12px 40px;
   font-size: 17px;
   font-weight: 500;
-  background: #ebebeb;
+  background: #fafafa;
   border-radius: 30px;
 }
 
