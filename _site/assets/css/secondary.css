@@ -140,6 +140,7 @@
     display: grid;
     justify-items: center;
     grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+    margin-bottom: 2rem;
   }
 }
 @media (max-width: 650px) {
@@ -147,6 +148,7 @@
     display: grid;
     justify-items: left;
     grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+    margin-bottom: 2rem;
   }
 }
 .progressbar-container {
