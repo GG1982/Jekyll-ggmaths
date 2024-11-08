@@ -432,7 +432,7 @@ header {
 
 .pricing-card {
   background-color: var(--background-colour-2);
-  padding: 2rem 1rem 1rem;
+  padding: 2rem 2rem 1rem;
   border: 1px solid rgb(42, 42, 42);
   box-shadow: var(--nice-shadow);
   border-radius: var(--card-border-radius);
@@ -506,6 +506,12 @@ header {
 //   width: min(65em, 100%);
 //   margin-inline: auto;
 // }
+
+.form-header {
+  display: grid;
+  gap: 0.5em;
+  justify-content: center;
+}
 .form-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
