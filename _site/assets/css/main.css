@@ -351,7 +351,7 @@ header {
   border: 1px solid rgb(42, 42, 42);
   box-shadow: var(--nice-shadow);
   border-radius: var(--card-border-radius);
-  width: min(100%, 600px);
+  width: min(100%, 800px);
   margin-inline: auto;
   display: flex;
   flex-direction: column;
@@ -362,10 +362,7 @@ header {
   display: grid;
   gap: 30px;
   text-wrap: pretty;
-}
-
-.pricing-card-benefits p {
-  text-wrap: pretty;
+  padding-inline: 1.25rem;
 }
 
 /* Reviews */
