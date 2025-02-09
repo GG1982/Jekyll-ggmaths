@@ -222,7 +222,7 @@ header {
     text-align: center;
   }
   .hero-reviews-content {
-    text-align: left;
+    display: none;
   }
   .hero-list > *:not(.list-contact) {
     display: none;
@@ -511,7 +511,6 @@ footer {
 
 html {
   scroll-behavior: smooth;
-  color-scheme: light dark;
 }
 
 /* Box sizing rules */
