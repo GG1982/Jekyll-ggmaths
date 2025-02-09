@@ -4,14 +4,8 @@ title: "Expert Private Maths Tutor | Giuliano Grasso"
 permalink: /
 ---
 <main>
-
     <section id="hero" class="hero hero-body">
         <div class="hero-body-title">
-            <div>
-                <h1 class="font-3 fancy-text">I will coach you to the top maths grades and Universities.</h1>
-                <h2 class="font-1">1-1 personal support to unlock your potential.</h2>
-                <!-- <h2 class="font-0 mobile-only">1-1 Private Maths Tutoring</h2> -->
-            </div>
             <div class="hero-reviews-content">
                 {% assign profile_reviews = site.data.google_reviews.result %}
                 {% for page in profile_reviews.reviews %}
@@ -19,27 +13,53 @@ permalink: /
                     <img style="transform: translateX({{ forloop.index0 | times: -15 }}px);" src="{{ page.profile_photo_url }}" width="45px" height="45px" alt="" srcset="">
                 </a>    
                 {% endfor %}
+
+                
                 <a target="_blank" rel="noopener" href="https://www.google.com/search?q=gg+maths&sca_esv=65b627a4699ea87d&sca_upv=1&rlz=1C5CHFA_enGB1048GB1048&sxsrf=ACQVn0-XxDA0PYh16jYUvOhSCO9hQKWQNA%3A1713442508041&ei=zA4hZtL7AdeDhbIPrsmWyAY&ved=0ahUKEwjSkaPg3suFAxXXQUEAHa6kBWkQ4dUDCBA&uact=5&oq=gg+maths&gs_lp=Egxnd3Mtd2l6LXNlcnAiCGdnIG1hdGhzMgoQIxiABBgnGIoFMgQQIxgnMgQQIxgnMg4QLhiABBjHARiOBRivATIIEAAYBxgKGB4yCBAAGAcYChgeMggQABgHGAoYHjIGEAAYBxgeMggQABgHGAoYHjIGEAAYBxgeMh0QLhiABBjHARiOBRivARiXBRjcBBjeBBjgBNgBAUj-DFCaBFjADHACeAGQAQCYAVOgAaIBqgEBMrgBA8gBAPgBAZgCBKACuwHCAgoQABiwAxjWBBhHmAMAiAYBkAYIugYGCAEQARgUkgcBNKAHqRI&sclient=gws-wiz-serp#lrd=0x48761923e87f01e1:0xb59e62c483b997c,1,,,,">
                     <p>⭐️⭐️⭐️⭐️⭐️</p>
                     <p>based on {{ profile_reviews.user_ratings_total }} reviews
                         <i class="bi bi-arrow-up-right"></i>
                     </p>
                 </a>
+            </div>
+            <div class="hero-content-title">
+                <h1 class="font-7">From a Grade 3 to a Grade 7 in 6 Months - Guaranteed!</h1>
+                <p class="font-2">The secret method that gets results</p>
+                <!-- <h2 class="font-0 mobile-only">1-1 Private Maths Tutoring</h2> -->
+            </div>
 
-            </div>
-            <div class="hero_contact">
-                <a href="/#contact"><button class="bn9"><span>Book a FREE Consultation</span></button></a>
-            </div>
-            </div>
+                <div class="hero-list">
+                    <p>Book a FREE call and we can discuss:</p>
+                    <div class="list-container">
+                        <ul class="list">
+                            <li><i class="bi bi-check-circle-fill"></i>How to learn FAST</li>
+                            <li><i class="bi bi-check-circle-fill"></i>How to boost your grades</li>
+                            <li><i class="bi bi-check-circle-fill"></i>The 5 topics you NEED to know</li>
+                        </ul>
+                        <ul class="list">
+                            <li><i class="bi bi-check-circle-fill"></i>How long it will take</li>
+                            <li><i class="bi bi-check-circle-fill"></i>How to write for the examineer</li>
+                            <li><i class="bi bi-check-circle-fill"></i>How to reach the top of your class</li>
+                        </ul>
+                    </div>
+                    <div class="list-contact">
+                        <a class="button" href="https://calendly.com/gg-maths-tutoring/30min" target="_blank" rel="noopener noreferrer">Book a FREE Assessment</a>
+                    </div>
+                </div>
+        </div>
+
+        <!-- <div class="hero-body-img">
+            <img src="../assets/images/IMG_0606.JPG" alt="">
+        </div> -->
     </section>
  
-    <section class="cards-section">
+    <!-- <section class="cards-section">
         <div class="cards-container">
-            <!-- <div class="card fade-in" style="--order: 1;">
+             <div class="card fade-in" style="--order: 1;">
                 <i class="font-2 bi bi-stars"></i>
                 <h3 class="fancy-text capitalize">Primary School Maths & English Tutoring</h3>
                 <p class="font--1">I help children advance using fun games. I've done this successfully with students from DAO, Latymer, and QE Boys schools. I aim to make tutoring great and enjoyable so kids can do their best!</p>
-            </div> -->
+            </div>
             <div class="card  box-shadow card-border-radius card-width" style="--order: 1;">
                 <i class="font-2 bi bi-graph-up-arrow"></i>
                 <h3 class="fancy-text capitalize">1-1 Personal Support</h3>
@@ -57,7 +77,7 @@ permalink: /
             </div>
         </div>
 
-    </section>  
+    </section>   -->
 
     {% include google_reviews.html %}
     
@@ -92,7 +112,8 @@ permalink: /
                 </div>
             </div>
         </section>
-        <a class="text-center" href="/#contact"><button class="bn9"><span>Book a FREE Consultation</span></button></a>
+        <div class="text-center"><a class="button" href="https://calendly.com/gg-maths-tutoring/30min" target="_blank" rel="noopener noreferrer">Book a FREE Assessment</a></div>
+
 
         <section class="coach" id="tutoring">
             <h2 class="fancy-text capitalize text-center font-2 mb-2">Tutoring
@@ -121,7 +142,8 @@ permalink: /
             </div>
         </section>
 
-        <a class="text-center" href="/#contact"><button class="bn9"><span>Book a FREE Consultation</span></button></a>
+        <div class="text-center"><a class="button" href="https://calendly.com/gg-maths-tutoring/30min" target="_blank" rel="noopener noreferrer">Book a FREE Assessment</a></div>
+
 
         <section id="youtube" class="youtube-section">
             <h2 class="fancy-text capitalize text-center font-2 mb-2">YouTube
@@ -149,7 +171,8 @@ permalink: /
             </div>
         </section>
 
-        <a class="text-center" href="/#contact"><button class="bn9"><span>Book a FREE Consultation</span></button></a>
+        <div class="text-center"><a class="button" href="https://calendly.com/gg-maths-tutoring/30min" target="_blank" rel="noopener noreferrer">Book a FREE Assessment</a></div>
+
 
         <section id="pricing" class="pricing">
             <h2 class="fancy-text capitalize text-center font-2 mb-2">Offer
@@ -178,7 +201,7 @@ permalink: /
                     </div>
                 </div>
                 <div>
-                    <a href="#contact" class="btn font-0">Free Consultation</a>
+                    <a href="#contact" class="btn font-0">Free Assessment</a>
                 </div>  -->
             </div>
 

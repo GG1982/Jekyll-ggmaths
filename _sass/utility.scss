@@ -83,6 +83,12 @@ a:hover {
   font-size: var(--step-5);
 }
 
+.font-6 {
+  font-size: var(--step-6);
+}
+.font-7 {
+  font-size: var(--step-7);
+}
 .text-center {
   text-align: center;
 }
@@ -114,20 +120,7 @@ a:hover {
 }
 
 .fancy-text {
-  // text-transform: capitalize;
-  background-image: var(--linear-grad);
-  background-clip: text;
-  /* Set the background size and repeat properties. */
-  background-size: 100%;
-  background-repeat: repeat;
-
-  /* Use the text as a mask for the background. */
-  /* This will show the gradient as a text color rather than element bg. */
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent; 
-  -moz-background-clip: text;
-  -moz-text-fill-color: transparent; 
+  color: var(--clr-accent);
 }
 
 //  widths
@@ -189,44 +182,62 @@ a:hover {
 
 
 // Buttons
-.bn9 {
-  padding: 3px;
-  outline: 0;
-  font-size: 17px;
-  color: rgb(0, 0, 0);
-  background: -webkit-gradient(
-    linear,
-    left top,
-    right top,
-    from(#fdde5c),
-    color-stop(#f8ab5e),
-    color-stop(#f56a62),
-    color-stop(#a176c8),
-    color-stop(#759beb),
-    color-stop(#65beb3),
-    to(#70db96)
-  );
-  background: linear-gradient(
-    to right,
-    #fdde5c,
-    #f8ab5e,
-    #f56a62,
-    #a176c8,
-    #759beb,
-    #65beb3,
-    #70db96
-  );
-  border-radius: 30px;
+.button {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  -moz-transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, color 0.2s ease-in-out;
+  -webkit-transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, color 0.2s ease-in-out;
+  -ms-transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, color 0.2s ease-in-out;
+  transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, color 0.2s ease-in-out;
   border: 0;
-  box-shadow: none;
   cursor: pointer;
+  display: inline-block;
+  font-weight: 400;
+  letter-spacing: 0.125em;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  white-space: nowrap;
+  font-size: 1rem;
+  max-width: 30rem;
+  height: 3.75em;
+  line-height: 3.75em;
+  border-radius: 3.75em;
+  padding: 0 2.5em;
+  text-overflow: ellipsis;
+  overflow: hidden;
+
+  background-color: var(--clr-accent);
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.2);
+  color: #ffffff !important;
 }
 
-.bn9 > span {
-  display: block;
-  padding: 12px 40px;
-  font-size: 17px;
-  font-weight: 500;
-  background: #fafafa;
-  border-radius: 30px;
+@media (max-width: 736px) {
+  .button {
+    font-size: 0.9rem;
+    max-width: 25rem;
+  }
 }
+
+// .bn9 {
+//   padding: 3px;
+//   outline: 0;
+//   font-size: 17px;
+//   color: #000;
+//   background: -webkit-gradient(linear, left top, right top, from(#fdde5c), color-stop(#f8ab5e), color-stop(#f56a62), color-stop(#a176c8), color-stop(#759beb), color-stop(#65beb3), to(#70db96));
+//   background: linear-gradient(to right, #fdde5c, #f8ab5e, #f56a62, #a176c8, #759beb, #65beb3, #70db96);
+//   border-radius: 30px;
+//   border: 0;
+//   box-shadow: none;
+//   cursor: pointer;
+// }
+// .bn9>span {
+//   display: block;
+//   padding: 12px 40px;
+//   font-size: 17px;
+//   font-weight: 500;
+//   background: #fafafa;
+//   border-radius: 30px;
+// }
