@@ -136,13 +136,12 @@ header {
 .hero {
   display: grid;
   align-items: center;
-  min-height: 900vh;
-  min-height: 90svh;
+  min-height: 80vh;
+  min-height: 80svh;
 }
 
 .hero-body {
   display: grid;
-  padding-bottom: 4rem;
 }
 
 .hero-body-title h1 {
@@ -200,7 +199,9 @@ header {
   justify-self: center;
 }
 
-.list .bi-check-circle-fill {
+.list .bi-check-circle-fill,
+.list .bi-youtube,
+.list .bi-graph-up-arrow {
   margin-right: 7px;
   color: var(--clr-accent);
 }
@@ -231,6 +232,26 @@ header {
     display: none;
   }
 }
+.copy-section {
+  max-width: 40em;
+  display: grid;
+  gap: 1em;
+  margin-inline: auto;
+}
+
+.copy-section blockquote {
+  font-size: var(--step-0);
+  font-style: italic;
+  max-width: 40ch;
+  margin-inline: auto;
+  text-align: center;
+}
+
+.copy-section blockquote footer {
+  background-color: red;
+  margin-left: auto;
+}
+
 .faq-section {
   display: grid;
   gap: 2rem;
@@ -841,6 +862,7 @@ a:hover {
   column-gap: 2em;
   width: min(100%, 70em);
   margin-inline: auto;
+  padding-block: 1em;
 }
 
 .review {

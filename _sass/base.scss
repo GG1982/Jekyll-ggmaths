@@ -166,14 +166,15 @@ header {
 .hero {
   display: grid;
   align-items: center;
-  min-height: 900vh;
-  min-height: 90svh;
+  min-height: 80vh;
+  min-height: 80svh;
+  // background-color: rebeccapurple;
 }
 
 .hero-body {
   display: grid;
   // grid-template-columns: 3fr 1fr;
-  padding-bottom: 4rem;
+  // padding-bottom: 4rem;
 }
 
 
@@ -231,7 +232,9 @@ header {
   list-style: none;
   justify-self: center;
 }
-.list .bi-check-circle-fill {
+.list .bi-check-circle-fill,
+.list .bi-youtube,
+.list .bi-graph-up-arrow {
   margin-right: 7px;
   color: var(--clr-accent);
 }
@@ -264,6 +267,31 @@ header {
     display: none;
   }
 }
+
+
+.copy-section {
+  // background-color: red;
+  max-width: 40em;
+  display: grid;
+  gap: 1em;
+  margin-inline: auto;
+
+}
+
+.copy-section blockquote {
+  font-size: var(--step-0);
+  font-style: italic;
+  max-width: 40ch;
+  margin-inline: auto;
+  text-align: center;
+}
+
+.copy-section blockquote footer {
+  background-color: red;
+  margin-left: auto;
+}
+
+
 
 // FAQ  
 
