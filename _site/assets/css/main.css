@@ -70,7 +70,7 @@ main p {
 /* Header */
 header {
   display: flex;
-  padding-block: 2em;
+  padding-top: 1em;
   justify-content: space-evenly;
 }
 
@@ -136,7 +136,7 @@ header {
 .hero {
   display: grid;
   align-items: center;
-  min-height: 90vh;
+  min-height: 900vh;
   min-height: 90svh;
 }
 
