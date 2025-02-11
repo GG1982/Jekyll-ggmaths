@@ -269,7 +269,7 @@ header {
 }
 
 
-.copy-section {
+.article {
   // background-color: red;
   max-width: 40em;
   display: grid;
@@ -278,7 +278,7 @@ header {
 
 }
 
-.copy-section blockquote {
+.article blockquote {
   font-size: var(--step-0);
   font-style: italic;
   max-width: 40ch;
@@ -286,11 +286,16 @@ header {
   text-align: center;
 }
 
-.copy-section blockquote footer {
+.article blockquote footer {
   background-color: red;
   margin-left: auto;
 }
 
+// Warning
+.warning .bi {
+  color: red;
+  font-size: 12rem;
+}
 
 
 // FAQ  
@@ -432,7 +437,7 @@ header {
 .about-body {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1rem;
   max-width: 90ch;
 }
 

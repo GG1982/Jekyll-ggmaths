@@ -232,14 +232,14 @@ header {
     display: none;
   }
 }
-.copy-section {
+.article {
   max-width: 40em;
   display: grid;
   gap: 1em;
   margin-inline: auto;
 }
 
-.copy-section blockquote {
+.article blockquote {
   font-size: var(--step-0);
   font-style: italic;
   max-width: 40ch;
@@ -247,9 +247,14 @@ header {
   text-align: center;
 }
 
-.copy-section blockquote footer {
+.article blockquote footer {
   background-color: red;
   margin-left: auto;
+}
+
+.warning .bi {
+  color: red;
+  font-size: 12rem;
 }
 
 .faq-section {
@@ -341,7 +346,7 @@ header {
 .about-body {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1rem;
   max-width: 90ch;
 }
 
@@ -654,7 +659,7 @@ a:hover {
   margin-inline: auto;
 }
 
-/* Font Size */
+/* Font */
 .font--2 {
   font-size: var(--step--2);
 }
