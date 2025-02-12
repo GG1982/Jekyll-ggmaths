@@ -297,6 +297,12 @@ header {
   font-size: 12rem;
 }
 
+.article .bi-graph-up-arrow {
+  color: var(--clr-accent);
+  font-size: 12rem;
+
+}
+
 
 // FAQ  
 
@@ -468,26 +474,17 @@ header {
 /* Youtube */
 .youtube-container {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  max-width: var(--body-content-width);
-  margin-inline: auto;
-  align-items: center;
-  gap: 2em;
+  row-gap: 1em;
 }
+
 .youtube-video {
   text-align: center;
   aspect-ratio: 16 / 9;
-  width: min(100%, 50em);
+  width: min(100%, 30em);
   margin-inline: auto;
   
 }
 
-.youtube-body {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  max-width: 90ch;
-}
 
 
 @media only screen and (max-width: 900px) {
