@@ -12,7 +12,7 @@
   --clr-accent: #28a745;
   --clr-light: #f2f2f2;
   --clr-dark: #2b3035;
-  --opacity-hover: 0.7;
+  --opacity-hover: 0.9;
   --gap: 1rem;
   --body-content-width: 65em;
   --fade-duration: 300ms;
@@ -614,7 +614,6 @@ h1 {
 
 a {
   text-decoration: none;
-  text-transform: capitalize;
   color: var(--light-clr);
 }
 
