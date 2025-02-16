@@ -23,7 +23,7 @@
 }
 
 body {
-  background-color: var(--background-colour);
+  background-color: var(--clr-light);
   color: var(--clr-dark);
   font-family: var(--body-font);
   display: grid;
