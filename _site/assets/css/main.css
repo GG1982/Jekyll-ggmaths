@@ -10,7 +10,7 @@
   --step-6: clamp(2.3328rem, 1.7643rem + 2.8426vw, 3.9673rem);
   --step-7: clamp(2.7994rem, 2.0481rem + 3.7561vw, 4.9591rem);
   --clr-accent: #28a745;
-  --clr-light: #f2f2f2;
+  --clr-light: #f9f9f9;
   --clr-dark: #2b3035;
   --opacity-hover: 0.9;
   --gap: 1rem;
