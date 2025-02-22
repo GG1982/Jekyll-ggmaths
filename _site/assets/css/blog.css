@@ -3,9 +3,10 @@
 }
 
 .blog-container {
+  --column-gap: 1rem;
   display: grid;
   grid-template-areas: "first first second" "first first third";
-  column-gap: 1rem;
+  column-gap: var(--column-gap);
   row-gap: 1rem;
   margin-inline: auto;
 }
