@@ -58,6 +58,7 @@
     }
 }
 
+
 .blog-card {
     border-radius: 0.5rem;
     background-color: #fff;
@@ -73,7 +74,6 @@
     border-top-left-radius: 4px;
     border-top-right-radius: 4px;
 }
-
 
 .blog-card-content {
     --padding-inline: 0.75rem;
@@ -251,3 +251,5 @@
 .blog__body img:not(:first-of-type) {
     grid-column: 3 / 11;
 }
+
+
