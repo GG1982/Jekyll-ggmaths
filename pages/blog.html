@@ -15,7 +15,7 @@ katex: True
                 <div class="blog-card-content blog-card-content-main">
                     <div>
                         <h2 class="post-title">{{ post.title }}</h2>
-                        <p class="post-desc">{{ post.content | markdownify | strip_html | truncatewords: 20 | capitalize }}</p>
+                        <p class="post-desc">{{ post.content | markdownify | strip_html | truncatewords: 15 | capitalize }}</p>
                     </div>
                     <p class="post-date">{{ post.author }} - {{ post.date | date_to_string }}</p>
                 </div>
