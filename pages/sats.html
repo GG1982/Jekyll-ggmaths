@@ -1,0 +1,58 @@
+---
+layout: default
+title: "SATS Topic Booklets"
+permalink: /sats
+custom_css: secondary
+---
+
+<main>
+        <section class="explain-container mt-2">
+            <h1>SATs Topics</h1>
+            <h2 class="capitalize">How this works</h2>
+            <p class="font-0">
+                These booklets contain every exam question from the SATs papers sorted by topic.
+            </p>
+            <ul class="key-points">
+                <h3>Key points:</h3>
+                <li class="font--1">Please check the box upon completing a topic. I recommend using a non-private browsing mode to ensure changes are saved.</li>
+                <li class="font--1">IGCSE Maths is the international version of GCSE Maths. Both are by Edexcel, and the questions are very similar.</li>
+                <li class="font--1">I have arranged the questions in order of difficulty for you.</li>
+                <li class="font--1">Grade 4-6 topics will still contain grade 7+ questions towards the end, so you should attempt them.</li>
+                <li class="font--1">Aim to complete at least the first ten questions per booklet. </li>
+            </ul>
+        </section>
+
+        <section class="topics-grid-container">
+
+            <div class="progressbar-container">
+                <p>My Progress</p>
+                <div class="progressbar">
+                    <span>This feature requires js 😔</span>
+                </div>
+            </div>
+        
+                <div class="two-col-container">
+        
+                    <div class="grade-4-container">
+                        <h3 class="fancy-text font-4 ">Arithmetic</h3>
+                        <ul class="topics flex-column flex-center gap-25">
+                            {% for file in site.static_files %}
+                            {% if file.path contains 'assets/SATs/Topics/Arithmetic' and file.extname == '.pdf' %}
+                            {% assign topic_id = file.name | split: '.' | first %}
+                            <li class="list-style-none">
+                                <input type="checkbox" id="checkbox_{{ topic_id }}" data-topic-id="{{ topic_id }}">
+                                <a id="topic_{{ topic_id }}" target="_blank" rel="noopener" href="{{ site.url }}{{ file.path }}">{{ file.name | replace: '_', " " | remove: ".pdf"}}</a>
+                            </li>
+                            {% endif %}
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+        
+        
+            </section>
+</main>
+
+
+
+<script defer src="{{ site.url }}/assets/js/topics.js"></script>
