@@ -31,11 +31,10 @@ custom_css: secondary
                 </div>
             </div>
         
-                <div class="two-col-container">
-        
-                    <div class="grade-4-container">
-                        <h3 class="fancy-text font-4 ">Arithmetic</h3>
-                        <ul class="topics flex-column flex-center gap-25">
+            <div class="sats-col-container">
+                    <div>
+                        <h3 class="font-1 text-center">Arithmetic</h3>
+                        <ul class="topics flex-column gap-25">
                             {% for file in site.static_files %}
                             {% if file.path contains 'assets/SATs/Topics/Arithmetic' and file.extname == '.pdf' %}
                             {% assign topic_id = file.name | split: '.' | first %}
@@ -47,7 +46,97 @@ custom_css: secondary
                             {% endfor %}
                         </ul>
                     </div>
-                </div>
+
+                    <div>
+                        <h3 class="font-1 text-center">Numbers</h3>
+                        <ul class="topics flex-column gap-25">
+                            {% for file in site.static_files %}
+                            {% if file.path contains 'assets/SATs/Topics/Numbers' and file.extname == '.pdf' %}
+                            {% assign topic_id = file.name | split: '.' | first %}
+                            <li class="list-style-none">
+                                <input type="checkbox" id="checkbox_{{ topic_id }}" data-topic-id="{{ topic_id }}">
+                                <a id="topic_{{ topic_id }}" target="_blank" rel="noopener" href="{{ site.url }}{{ file.path }}">{{ file.name | replace: '_', " " | remove: ".pdf"}}</a>
+                            </li>
+                            {% endif %}
+                            {% endfor %}
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h3 class="font-1 text-center">Calculation</h3>
+                        <ul class="topics flex-column gap-25">
+                            {% for file in site.static_files %}
+                            {% if file.path contains 'assets/SATs/Topics/Calculation' and file.extname == '.pdf' %}
+                            {% assign topic_id = file.name | split: '.' | first %}
+                            <li class="list-style-none">
+                                <input type="checkbox" id="checkbox_{{ topic_id }}" data-topic-id="{{ topic_id }}">
+                                <a id="topic_{{ topic_id }}" target="_blank" rel="noopener" href="{{ site.url }}{{ file.path }}">{{ file.name | replace: '_', " " | remove: ".pdf"}}</a>
+                            </li>
+                            {% endif %}
+                            {% endfor %}
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h3 class="font-1 text-center">Fractions, Decimals & Percentages</h3>
+                        <ul class="topics flex-column gap-25">
+                            {% for file in site.static_files %}
+                            {% if file.path contains 'assets/SATs/Topics/Fractions_Decimals_Percentages' and file.extname == '.pdf' %}
+                            {% assign topic_id = file.name | split: '.' | first %}
+                            <li class="list-style-none">
+                                <input type="checkbox" id="checkbox_{{ topic_id }}" data-topic-id="{{ topic_id }}">
+                                <a id="topic_{{ topic_id }}" target="_blank" rel="noopener" href="{{ site.url }}{{ file.path }}">{{ file.name | replace: '_', " " | remove: ".pdf"}}</a>
+                            </li>
+                            {% endif %}
+                            {% endfor %}
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h3 class="font-1 text-center">Data</h3>
+                        <ul class="topics flex-column gap-25">
+                            {% for file in site.static_files %}
+                            {% if file.path contains 'assets/SATs/Topics/Data' and file.extname == '.pdf' %}
+                            {% assign topic_id = file.name | split: '.' | first %}
+                            <li class="list-style-none">
+                                <input type="checkbox" id="checkbox_{{ topic_id }}" data-topic-id="{{ topic_id }}">
+                                <a id="topic_{{ topic_id }}" target="_blank" rel="noopener" href="{{ site.url }}{{ file.path }}">{{ file.name | replace: '_', " " | remove: ".pdf"}}</a>
+                            </li>
+                            {% endif %}
+                            {% endfor %}
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h3 class="font-1 text-center">Measure</h3>
+                        <ul class="topics flex-column gap-25">
+                            {% for file in site.static_files %}
+                            {% if file.path contains 'assets/SATs/Topics/Measure' and file.extname == '.pdf' %}
+                            {% assign topic_id = file.name | split: '.' | first %}
+                            <li class="list-style-none">
+                                <input type="checkbox" id="checkbox_{{ topic_id }}" data-topic-id="{{ topic_id }}">
+                                <a id="topic_{{ topic_id }}" target="_blank" rel="noopener" href="{{ site.url }}{{ file.path }}">{{ file.name | replace: '_', " " | remove: ".pdf"}}</a>
+                            </li>
+                            {% endif %}
+                            {% endfor %}
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h3 class="font-1 text-center">Geometry</h3>
+                        <ul class="topics flex-column gap-25">
+                            {% for file in site.static_files %}
+                            {% if file.path contains 'assets/SATs/Topics/Geometry' and file.extname == '.pdf' %}
+                            {% assign topic_id = file.name | split: '.' | first %}
+                            <li class="list-style-none">
+                                <input type="checkbox" id="checkbox_{{ topic_id }}" data-topic-id="{{ topic_id }}">
+                                <a id="topic_{{ topic_id }}" target="_blank" rel="noopener" href="{{ site.url }}{{ file.path }}">{{ file.name | replace: '_', " " | remove: ".pdf"}}</a>
+                            </li>
+                            {% endif %}
+                            {% endfor %}
+                        </ul>
+                    </div>
+            </div>
         
         
             </section>
