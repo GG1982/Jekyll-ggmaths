@@ -101,6 +101,15 @@
     background-color: black;
 }
 
+.blog-card-main > img {
+    max-height: 22rem;
+    object-fit: cover;
+}
+
+.blog-card-side > img {
+    max-height: 8rem;
+    object-fit: cover;
+}
 
 .blog-other {
     display: grid;
