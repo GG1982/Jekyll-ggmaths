@@ -5,10 +5,26 @@ permalink: thanks
 ---
 
 <main>
-    <div class="flex-column flex-align-center gap-1 text-center mt-2">
-        <p>Thank you for getting in contact</p>
-        <p>I will be in touch asap</p>
-        <p>Kind regards,</p>
+    <div class="flex-column flex-align-center text-center mt-4 ch-70 mx-auto">
+        <h2>Thank you for reaching out!</h2>
+        <br>
+        <p>I'll get back to you as soon as possible.</p>
+        <p>In the meantime, check out my <a class="body-link" href="{{ site.url }}/blog" target="_blank" rel="noopener noreferrer">blog</a>, or some of the articles below for the best maths tips I've gathered over the years.</p>
+        <br>
+        <p>Best regards,</p>
         <p>Giuliano</p>
     </div>
+    <section class="ch-80 mx-auto">
+                {% for post in site.posts offset:3 limit: 3 %}
+                <a href="{{ post.url }}" class="blog-other-link">
+                    <div class="blog-other-content">
+                        <h2 class="post-title font-0 capitalize">{{ post.title }}</h2>
+                        <p class="post-desc font--1">{{ post.content | markdownify | strip_html | truncatewords: 20 | capitalize }}</p>
+                        <p class="post-date font--2">{{ post.author }} - {{ post.date | date_to_string }}</p>
+                    </div>
+                </a>
+                <hr>
+                <br>
+                {% endfor %}
+    </section>
 </main>
