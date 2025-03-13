@@ -2,7 +2,6 @@
 layout: default
 title: "Expert Private Maths Tutor | Giuliano Grasso"
 permalink: /
-google-link: https://www.google.com/maps/place/Top-Rated+GCSE+%26+A-Level+Maths+Tutor+-+Proven+Results/@51.6350783,-0.1435437,17z/data=!3m1!4b1!4m6!3m5!1s0x48761923e87f01e1:0xb59e62c483b997c!8m2!3d51.6350783!4d-0.1409634!16s%2Fg%2F11gmwmc5nt?entry=ttu&g_ep=EgoyMDI1MDMxMC4wIKXMDSoASAFQAw%3D%3D
 ---
 <main>
     <section id="hero" class="hero hero-body">
@@ -16,7 +15,7 @@ google-link: https://www.google.com/maps/place/Top-Rated+GCSE+%26+A-Level+Maths+
                 {% endfor %}
 
                 
-                <a target="_blank" rel="noopener" href="{{ page.google-link }}">
+                <a target="_blank" rel="noopener" href="{{ site.reviews }}">
                     <p>⭐️⭐️⭐️⭐️⭐️</p>
                     <p>based on {{ profile_reviews.user_ratings_total }} reviews
                         <i class="bi bi-arrow-up-right"></i>
@@ -76,9 +75,9 @@ google-link: https://www.google.com/maps/place/Top-Rated+GCSE+%26+A-Level+Maths+
         <p>And Ben isn't the only one.</p>
         <p>I've worked with hundreds of students, and the results speak for themselves:</p>
         <ul class="list">
-            <li class="font-0"><i class="bi bi-check-circle-fill"></i> {{ profile_reviews.user_ratings_total }} five-star reviews on <a class="body-link capitalize" href="https://www.google.com/maps?cid=817937885209270652" target="_blank" rel="noopener noreferrer">google</a></li>
+            <li class="font-0"><i class="bi bi-check-circle-fill"></i> {{ profile_reviews.user_ratings_total }} five-star reviews on <a class="body-link capitalize" href="{{ site.reviews }}" target="_blank" rel="noopener noreferrer">google</a></li>
             <li class="font-0"><i class="bi bi-youtube"></i> A <a class="body-link capitalize" href="https://www.youtube.com/@GGMaths" target="_blank" rel="noopener noreferrer">YouTube channel</a> with 4,000+ subscribers and over 250,000 views</li>
-            <li class="font-0"><i class="bi bi-graph-up-arrow"></i> A <a class="body-link capitalize" href="#reviews">proven track record</a> of helping students go from struggling to thriving</li>
+            <li class="font-0"><i class="bi bi-graph-up-arrow"></i> A <a class="body-link capitalize" href="{{ site.url }}/#reviews">proven track record</a> of helping students go from struggling to thriving</li>
         </ul>
 
         <p>But let's not beat around the bush. </p>
@@ -281,7 +280,7 @@ google-link: https://www.google.com/maps/place/Top-Rated+GCSE+%26+A-Level+Maths+
                 <h2 class="fancy-text capitalize text-center font-2 mb-2">Testimonials
                     <span class="block font-3">what students & parents have to say</span>
                 </h2>
-                <a target="_blank" rel="noopener" href="{{ page.google-link }}"></a>
+                <a target="_blank" rel="noopener" href="{{ site.reviews }}"></a>
             </div>
             <div class="review-container">
                 <div class="review-card fade-in box-shadow card-border-radius card-width" style="--order: 1">

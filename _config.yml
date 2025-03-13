@@ -1,3 +1,5 @@
 url: "https://ggmaths.co.uk" # the base hostname & protocol for your site, e.g. http://example.com
 baseurl: "" # the subpath of your site, e.g. /blog
 title: "GG Maths" # the name of your site, e.g. ACME Corp.
+
+reviews: "https://www.google.com/maps/place/Top-Rated+GCSE+%26+A-Level+Maths+Tutor+-+Proven+Results/@51.6350783,-0.1435437,17z/data=!3m1!4b1!4m6!3m5!1s0x48761923e87f01e1:0xb59e62c483b997c!8m2!3d51.6350783!4d-0.1409634!16s%2Fg%2F11gmwmc5nt?entry=ttu&g_ep=EgoyMDI1MDMxMC4wIKXMDSoASAFQAw%3D%3D"
