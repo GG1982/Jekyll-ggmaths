@@ -32,7 +32,7 @@ body {
 
 body > * {
   margin-inline: auto;
-  width: min(100% - 3rem, 70em);
+  width: min(100% - 3rem, 70rem);
 }
 
 main {
@@ -167,6 +167,14 @@ header {
   gap: 1rem;
 }
 
+.hero-content-title > h1 {
+  font-size: var(--step-6);
+}
+
+.hero-content-title > h2 {
+  font-size: var(--step-3);
+}
+
 .hero-reviews-content {
   display: flex;
   align-items: center;
@@ -226,6 +234,12 @@ header {
   }
   .hero-reviews-content {
     display: none;
+  }
+  .hero-content-title > h1 {
+    font-size: var(--step-4);
+  }
+  .hero-content-title > h2 {
+    font-size: var(--step-1);
   }
   .hero-list > *:not(.list-contact) {
     display: none;
@@ -830,8 +844,8 @@ a:hover {
 
 @media (max-width: 736px) {
   .button {
-    font-size: 0.9rem;
-    max-width: 25rem;
+    font-size: 0.8rem;
+    max-width: 20rem;
   }
 }
 /* Fade Animations */

@@ -38,6 +38,11 @@
   --linear-grad: linear-gradient(to right, var(--clr-accent-2), var(--clr-accent)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
+// Debugging
+// * + * {
+//   outline: red solid 1px;
+// }
+
 
 body {
   background-color: var(--clr-light);
@@ -56,7 +61,7 @@ body {
 
 body > * {
   margin-inline: auto;
-  width: min(100% - 3rem, 70em);
+  width: min(100% - 3rem, 70rem);
 }
 
 main {
@@ -200,6 +205,13 @@ header {
   flex-direction: column;
   gap: 1rem;
 }
+.hero-content-title > h1 {
+  font-size: var(--step-6);
+}
+
+.hero-content-title > h2 {
+  font-size: var(--step-3);
+}
 
 
 .hero-reviews-content {
@@ -260,6 +272,13 @@ header {
   }
   .hero-reviews-content {
     display: none;
+  }
+  .hero-content-title > h1 {
+    font-size: var(--step-4);
+  }
+
+  .hero-content-title > h2 {
+    font-size: var(--step-1);
   }
   .hero-list > *:not(.list-contact){
     display: none;
