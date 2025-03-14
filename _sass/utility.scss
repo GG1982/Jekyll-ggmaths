@@ -37,6 +37,26 @@ a:hover {
   display: none;
 }
 
+@media only screen and (min-width: 651px) {
+  .desktop-only {
+    display: inline-block;
+  }
+  .mobile-only {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .mobile-only {
+    display: inline-block;
+  }
+
+  .desktop-only {
+    display: none;
+  }
+
+}
+
 .box-shadow {
   box-shadow: var(--nice-shadow);
 }
@@ -140,8 +160,6 @@ a:hover {
 }
 
 //  widths
-
-
 .ch-50 {
   max-width: 50ch;
 }
