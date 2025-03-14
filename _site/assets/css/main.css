@@ -891,7 +891,7 @@ a:hover {
   box-shadow: var(--nice-shadow);
 }
 
-@media only screen and (min-width: 700px) {
+@media only screen and (min-width: 651px) {
   .reviews-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
@@ -902,7 +902,7 @@ a:hover {
     padding-block: 1rem;
   }
 }
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 650px) {
   .media-scroller {
     display: grid;
     gap: 1rem;
@@ -910,7 +910,7 @@ a:hover {
     grid-auto-columns: 350px;
     overflow-x: auto;
     overscroll-behavior-inline: contain;
-    width: 40em;
+    max-width: 40em;
     margin-inline: auto;
     padding-block: 1rem;
     padding-inline: 1rem;
