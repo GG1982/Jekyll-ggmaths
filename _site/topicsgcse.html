@@ -65,7 +65,10 @@
 
       
 
-      <main>
+      <style>
+
+</style>
+<main>
     <section class="explain-container mt-2">
         <h1>GCSE Topics</h1>
         <h2 class="capitalize">How this works</h2>
@@ -81,16 +84,20 @@
             <li class="font--1">Aim to complete at least the first ten questions per booklet. </li>
         </ul>
     </section>
-
+    
     <section class="topics-grid-container">
-
-    <div class="progressbar-container">
-        <p>My Progress</p>
-        <div class="progressbar">
-            <span>This feature requires js 😔</span>
+        
+        <div class="progressbar-container">
+            <p>My Progress</p>
+            <div class="progressbar">
+                <span>This feature requires js 😔</span>
+            </div>
         </div>
-    </div>
-
+        
+        <div class="streak-container">
+            <div id="streakDisplay"></div>
+        </div>
+        
         <div class="two-col-container">
 
             <div class="grade-4-container">
@@ -3140,6 +3147,7 @@
 </main>
 
 <script defer src="http://localhost:4000/assets/js/topics.js"></script>
+<script defer src="http://localhost:4000/assets/js/streak.js"></script>
 
 <script>
     const topics = document.querySelectorAll('a[id^="topic_"]');

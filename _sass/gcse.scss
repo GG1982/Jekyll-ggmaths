@@ -267,6 +267,23 @@
     100% { --gradient-angle: 360deg }
 }
 
+// Streak
+.streak-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  #streakDisplay {
+    background-color: #f0f0f0; /* Light gray background */
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 1.5em;
+    font-weight: bold;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    text-align: center;
+  }
 
 
 // SATs Topics
