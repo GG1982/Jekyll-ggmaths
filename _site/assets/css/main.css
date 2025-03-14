@@ -889,6 +889,7 @@ a:hover {
   padding: 1rem;
   border-radius: 1rem;
   box-shadow: var(--nice-shadow);
+  overflow: hidden;
 }
 
 @media only screen and (min-width: 651px) {
@@ -907,10 +908,10 @@ a:hover {
     display: grid;
     gap: 1rem;
     grid-auto-flow: column;
-    grid-auto-columns: 350px;
+    grid-auto-columns: min(80%, 300px);
     overflow-x: auto;
     overscroll-behavior-inline: contain;
-    max-width: 40em;
+    width: 100%;
     margin-inline: auto;
     padding-block: 1rem;
     padding-inline: 1rem;
