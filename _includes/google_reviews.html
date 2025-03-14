@@ -1,7 +1,7 @@
 <section class="reviews-section" id="reviews">
     {% assign profile_reviews = site.data.google_reviews.result %}
-    <div class="reviews-container">
-        <a href="{{ profile_reviews.url }}" target="_blank" rel="noopener" class="review">
+    <div class="reviews-container media-scroller snaps-inline">
+        <a href="{{ profile_reviews.url }}" target="_blank" rel="noopener" class="review media-element">
             <p class="font-1 text-center">{{ profile_reviews.rating }}</p>
             <p class="text-center">⭐️⭐️⭐️⭐️⭐️</p>
             <p class="text-center fancy-text">Overall Rating</p>
@@ -12,8 +12,8 @@
 
         {% for page in profile_reviews.reviews %}
             {% if page.rating == 5 %}
-                <div class="review">
-                    <div class="review-profile flex-row flex-align-center gap-1">
+                <div class="review media-element">
+                    <div class="review-profile flex-row flex-align-center gap-1 media-element">
                         <img src="{{ page.profile_photo_url }}" width="40px" height="40px" alt="" srcset="">
                         <div>
                             <p>{{ page.author_name }}</p>

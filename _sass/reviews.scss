@@ -1,18 +1,54 @@
-.reviews-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
-    row-gap: 2em;
-    column-gap: 2em;
-    width: min(100%, 70em);
-    margin-inline: auto;
-    padding-block: 1em;
-}
 
 .review {
     display: grid;
-    gap: 1em;
+    gap: 1rem;
     background-color: #fff;
-    padding: 1em;
-    border-radius: 1em;
+    padding: 1rem;
+    border-radius: 1rem;
     box-shadow: var(--nice-shadow);
+}
+
+@media only screen and (min-width: 700px) {
+    .reviews-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+        row-gap: 2em;
+        column-gap: 2em;
+
+        width: min(100%, 70em);
+        margin-inline: auto;
+        padding-block: 1rem;
+    }
+}
+
+
+@media only screen and (max-width: 700px) {
+    .media-scroller {
+        display: grid;
+        gap: 1rem;
+        grid-auto-flow: column;
+        grid-auto-columns: 350px;
+
+        overflow-x: auto;
+        overscroll-behavior-inline: contain;
+
+        width: 40em;
+        margin-inline: auto;
+        padding-block: 1rem;
+        padding-inline: 1rem;
+    }
+
+    .media-element {
+        grid-template-rows: min-content;
+    }
+
+    .snaps-inline {
+        scroll-snap-type: inline mandatory;
+        scroll-padding-inline: 1rem;
+    }
+
+    .snaps-inline > * {
+        scroll-snap-align: start;
+    }
+
 }
