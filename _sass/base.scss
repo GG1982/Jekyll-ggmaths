@@ -185,16 +185,18 @@ header {
 
 .hero-body-title h1 {
   max-width: 50ch;
-  // text-wrap: pretty;
+  text-wrap: balance;
   font-weight: 500;
+  line-height: 1.25;
 }
 .hero-body-title h2 {
   max-width: 40ch;
   font-weight: 300;
+  line-height: 1.35;
   // text-wrap: pretty;
 }
 .hero-body-title {
-  margin-top: 5%;
+  margin-top: 2rem;
   display: flex;
   flex-direction: column;
   gap: 2rem;
