@@ -22,7 +22,7 @@ katex: True
                         <h2 class="post-title">{{ post.title }}</h2>
                         <p class="post-desc">{{ post.content | markdownify | strip_html | truncatewords: 15 | capitalize }}</p>
                     </div>
-                    <p class="post-date">{{ post.author }} - {{ post.date | date_to_string }}</p>
+                    <p class="post-date">{{ post.author }}</p>
                 </div>
             </a>
         {% endfor %}
@@ -33,7 +33,7 @@ katex: True
                 <div class="blog-card-content blog-card-content-side">
                     <h2 class="post-title font-0">{{ post.title }}</h2>
                     <p class="post-desc font--1">{{ post.content | markdownify | strip_html | truncatewords: 10 | capitalize }}</p>
-                    <p class="post-date font--2">{{ post.author }} - {{ post.date | date_to_string }}</p>
+                    <p class="post-date font--2">{{ post.author }}</p>
                 </div>
             </a>
         {% endfor %}
@@ -46,7 +46,7 @@ katex: True
                     <div class="blog-other-content">
                         <h2 class="post-title font-0 capitalize">{{ post.title }}</h2>
                         <p class="post-desc font--1">{{ post.content | markdownify | strip_html | truncatewords: 20 | capitalize }}</p>
-                        <p class="post-date font--2">{{ post.author }} - {{ post.date | date_to_string }}</p>
+                        <p class="post-date font--2">{{ post.author }}</p>
                     </div>
                 </a>
                 <hr>
