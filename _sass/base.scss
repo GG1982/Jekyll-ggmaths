@@ -105,7 +105,12 @@ header {
   justify-content: space-evenly;
 }
 
-
+#nav {
+  position: sticky;
+  top: 0;
+  z-index: 99999;
+  background-color: var(--clr-light);
+}
 .nav-header {
   display: flex;
   flex-wrap: wrap;
@@ -114,6 +119,8 @@ header {
   justify-content: space-evenly;
   align-items: center;
   flex-grow: 1;
+
+
 }
 
 .nav-header > ul {

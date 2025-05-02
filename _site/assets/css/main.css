@@ -74,6 +74,13 @@ header {
   justify-content: space-evenly;
 }
 
+#nav {
+  position: sticky;
+  top: 0;
+  z-index: 99999;
+  background-color: var(--clr-light);
+}
+
 .nav-header {
   display: flex;
   flex-wrap: wrap;
