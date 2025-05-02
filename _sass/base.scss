@@ -174,11 +174,29 @@ header {
   min-height: 80vh;
   min-height: 80svh;
   // background-color: rebeccapurple;
+  position: relative;
+  isolation: isolate;
+}
+
+@media (min-width: 1028px) {
+  .hero::after {
+    content: "";
+    z-index: -1;
+    right: 0;
+    position: absolute;
+    width: 20%;
+    aspect-ratio: 1 / 1;
+    background-image: url(/assets/images/giuliano_headshot.png);
+    background-size: cover;
+    border-radius: 100%;
+    box-shadow: var(--nice-shadow);
+    
+  }
 }
 
 .hero-body {
   display: grid;
-  // grid-template-columns: 3fr 1fr;
+  // grid-template-columns: 1fr 150px;
   // padding-bottom: 4rem;
 }
 
@@ -221,6 +239,7 @@ header {
   align-items: center;
   flex-wrap: wrap;
 }
+
 
 .hero-body-img img {
   object-fit: contain;

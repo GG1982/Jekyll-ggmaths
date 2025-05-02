@@ -138,8 +138,24 @@ header {
   align-items: center;
   min-height: 80vh;
   min-height: 80svh;
+  position: relative;
+  isolation: isolate;
 }
 
+@media (min-width: 1028px) {
+  .hero::after {
+    content: "";
+    z-index: -1;
+    right: 0;
+    position: absolute;
+    width: 20%;
+    aspect-ratio: 1/1;
+    background-image: url(/assets/images/giuliano_headshot.png);
+    background-size: cover;
+    border-radius: 100%;
+    box-shadow: var(--nice-shadow);
+  }
+}
 .hero-body {
   display: grid;
 }
