@@ -884,6 +884,11 @@ a:hover {
   color: #ffffff !important;
 }
 
+.button-inv {
+  background-color: var(--clr-dark);
+  color: var(--clr-light) !important;
+}
+
 @media (max-width: 736px) {
   .button {
     font-size: 0.8rem;
