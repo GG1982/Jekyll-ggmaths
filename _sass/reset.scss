@@ -2,6 +2,7 @@
 // Reset
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: 80px;
     // color-scheme: light dark;
   }
   
@@ -24,6 +25,7 @@ html {
   /* Set core root defaults */
   html:focus-within {
     scroll-behavior: smooth;
+    scroll-padding-top: 80px;
   }
   
   /* Set core body defaults */
