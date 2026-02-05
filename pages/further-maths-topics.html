@@ -1,0 +1,67 @@
+---
+layout: default
+title: "Further Maths A-Level Topic Booklets"
+permalink: /topics-further
+custom_css: secondary
+---
+
+
+<main>
+    <section class="explain-container mt-2">
+<section class="explain-container mt-2">
+    <h1>A-Level Further Mathematics</h1>
+    <h2 class="capitalize">Core Pure 1 & 2</h2>
+    <p class="font-0">
+        These booklets contain compiled exam questions from the Edexcel Further Mathematics specification, strictly sorted by topic (Matrices, Complex Numbers, Vectors, etc).
+    </p>
+    <ul class="key-points">
+        <h3>Key points:</h3>
+        <li class="font--1">Please check the box upon completing a topic. I recommend using one device and a non-private browsing mode to ensure your progress is saved.</li>
+        <li class="font--1"><strong>Arranged by difficulty:</strong> Questions start with routine calculations and progress to complex, synoptic modeling problems.</li>
+        <li class="font--1">Aim to complete every question. The harder questions often combine multiple topics (e.g., using Matrices to solve Differential Equations).</li>
+    </ul>
+    <a class="btn capitalize" target="_blank" rel="noopener" href="/assets/a-level/Formula_Book.pdf">Further Maths Formula Booklet</a>
+</section>
+
+    <section class="topics-grid-container">
+
+    <div class="progressbar-container">
+        <p>My Progress</p>
+        <div class="progressbar">
+            <span>This feature requires js 😔</span>
+        </div>
+    </div>
+    <div class="streak-container">
+        <div id="streakDisplay"></div>
+    </div>
+
+        <div class="pure-section">
+            <hr>
+            <h2 class="text-center font-5">Pure</h2>
+            <div class="two-col-container">
+                <div class="grade-4-container">
+                    <h3 class="fancy-text font-4 ">Further Maths <span class="font-0"></span></h3>
+                    <ul class="topics flex-column gap-25">
+                        {% for file in site.static_files %}
+                        {% if file.path contains 'assets/further-maths/core-pure' and file.extname == '.pdf' %}
+                        {% assign topic_id = file.name | split: '.' | first %}
+                        <li class="list-style-none">
+                            <input type="checkbox" id="checkbox_{{ topic_id }}" data-topic-id="{{ topic_id }}">
+                            <a id="topic_{{ topic_id }}" target="_blank" rel="noopener" href="{{ site.url }}{{ file.path }}">{{ file.name | replace: '_', " " | remove: ".pdf"}}</a>
+                        </li>
+                        {% endif %}
+                        {% endfor %}
+                        <br>
+
+                    </ul>
+                </div>
+            </div>
+            <hr>
+        </div>
+
+    </section>
+
+</main>
+
+<script defer src="{{ site.url }}/assets/js/topics.js"></script>
+<script defer src="{{ site.url }}/assets/js/streak.js"></script>
